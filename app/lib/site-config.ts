@@ -29,7 +29,7 @@ export const siteConfig = {
   guaranteeStatement:
     "Garantie sur nos travaux selon les conditions précisées dans le devis et le contrat.",
   teamStatement: "Travaux réalisés par notre propre équipe d'artisans.",
-  indexingEnabled: false,
+  indexingEnabled: true,
 
   ghl: {
     formUrl: "https://link.westlanddre.com/widget/form/3CjwChGZ2ZSmy16TGijM",

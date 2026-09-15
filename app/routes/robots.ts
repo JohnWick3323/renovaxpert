@@ -5,8 +5,8 @@ import { siteConfig } from "~/lib/site-config";
  * Route ressource dynamique SSR pour /robots.txt
  * Pilotée de manière centralisée par siteConfig.indexingEnabled.
  * Tant que indexingEnabled est false : bloque le crawl (Disallow: /).
- * Dès que indexingEnabled est true : autorise l'indexation publique,
- * exclut /merci et /politique-de-confidentialite, et déclare le sitemap.
+ * Dès que indexingEnabled est true : autorise l'indexation publique (Allow: /)
+ * et déclare la référence canonique au sitemap XML.
  */
 export function loader({}: Route.LoaderArgs) {
   let content = "";
@@ -15,8 +15,6 @@ export function loader({}: Route.LoaderArgs) {
     content = [
       "User-agent: *",
       "Allow: /",
-      "Disallow: /merci",
-      "Disallow: /politique-de-confidentialite",
       "",
       `Sitemap: ${siteConfig.canonicalOrigin}/sitemap.xml`,
       "",

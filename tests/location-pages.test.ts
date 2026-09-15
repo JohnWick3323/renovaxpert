@@ -108,13 +108,15 @@ test("Check 7: Le sitemap contient exactement les 15 URLs canoniques indexables"
   }
 });
 
-test("Check 8 & 9: /merci et politique restent noindex, et robots.txt bloque le crawl tant que indexingEnabled est false", async () => {
-  assert.equal(siteConfig.indexingEnabled, false, "indexingEnabled doit rester à false avant le lancement live");
+test("Check 8 & 9: /merci et politique restent noindex, et robots.txt autorise le crawl avec sitemap", async () => {
+  assert.equal(siteConfig.indexingEnabled, true, "indexingEnabled doit être à true pour le lancement live");
   const response = await robotsLoader({} as any);
   assert.equal(response.status, 200);
   const text = await response.text();
   assert.ok(text.includes("User-agent: *"));
-  assert.ok(text.includes("Disallow: /"));
+  assert.ok(text.includes("Allow: /"));
+  assert.ok(text.includes("Sitemap: https://renovaxpert.fr/sitemap.xml"));
+  assert.ok(!text.includes("Disallow: /"));
 });
 
 test("Check 10: Aucun hotlink d'image externe (Unsplash/Pexels) dans les fichiers .css, .scss, .ts, .tsx de tout le projet", () => {

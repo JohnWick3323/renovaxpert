@@ -58,15 +58,17 @@ test("Sitemap XML - Contient exactement les 15 URLs canoniques publiques sans ww
   assert.ok(!xml.includes("www.renovaxpert.fr"), "Le sitemap ne doit contenir aucun www");
 });
 
-test("Robots.txt Dynamique - Bloque le crawl tant que indexingEnabled est false", async () => {
+test("Robots.txt Dynamique - Autorise le crawl et déclare le sitemap quand indexingEnabled est true", async () => {
+  assert.equal(siteConfig.indexingEnabled, true);
   const response = await robotsLoader({} as any);
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("Content-Type"), "text/plain; charset=utf-8");
 
   const text = await response.text();
   assert.ok(text.includes("User-agent: *"));
-  assert.ok(text.includes("Disallow: /"));
-  assert.ok(!text.includes("Allow: /"));
+  assert.ok(text.includes("Allow: /"));
+  assert.ok(text.includes("Sitemap: https://renovaxpert.fr/sitemap.xml"));
+  assert.ok(!text.includes("Disallow: /"));
 });
 
 test("Page /merci - Omet le canonique et déclare noindex, nofollow", () => {

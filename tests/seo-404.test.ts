@@ -22,7 +22,7 @@ test("SEO Helper - Page standard génère un canonique et un og:url valides", ()
   assert.ok(ogUrl);
   assert.equal(ogUrl.content, "https://renovaxpert.fr/services");
   assert.ok(robots);
-  assert.equal(robots.content, "noindex, nofollow");
+  assert.equal(robots.content, "index, follow");
 });
 
 test("SEO Helper - Page 404 omet le canonique et og:url mais conserve noindex, nofollow", () => {
