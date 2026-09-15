@@ -1,35 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router";
-import { Star, ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
+import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import styles from "./hero-section.module.css";
 
-const services = [
-  "Peinture Intérieure",
-  "Pose Parquet",
-  "Carrelage",
-  "Sol Vinyle",
-  "Nettoyage",
-  "Pose de plaques de plâtre",
-];
-
 export function HeroSection({ className }: { className?: string }) {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 900);
-  }
-
   return (
     <section className={`${styles.hero} ${className ?? ""}`}>
       <div className={styles.bg} />
@@ -39,26 +14,29 @@ export function HeroSection({ className }: { className?: string }) {
         <div className={styles.left}>
           <div className={styles.badge}>
             <Star size={12} fill="currentColor" />
-            Rénovation Professionnelle
+            Artisans Rénovation Paris
           </div>
           <h1 className={styles.title}>
-            Transformez Vos <span>Espaces</span> Intérieurs
+            Entreprise de Rénovation Intérieure à <span>Paris</span>
           </h1>
           <p className={styles.subtitle}>
-            RenovaXpert offre des services de rénovation intérieure de qualité : peinture, parquet, carrelage, sol vinyle
-            et nettoyage. Travail propre, rapide et professionnel.
+            RenovaXpert prend en charge vos travaux de rénovation intérieure dans tout Paris et en proche couronne : peinture, parquet,
+            carrelage, sol vinyle, pose de plaques de plâtre et nettoyage après chantier. Travaux soignés réalisés par notre propre équipe d'artisans.
           </p>
-          <div className={styles.actions}>
+          <div className={styles.actions} style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <Link to="/services" className="btn btn-outline-white">
               Nos Services
               <ArrowRight size={16} />
             </Link>
+            <Link to="/zones-intervention" className="btn btn-outline-white">
+              Zones d'intervention
+            </Link>
           </div>
           <div className={styles.stats}>
             {[
-              { number: "500+", label: "Projets Réalisés" },
-              { number: "12+", label: "Années d'Expérience" },
-              { number: "98%", label: "Clients Satisfaits" },
+              { number: "Devis", label: "Gratuit et sans engagement" },
+              { number: "24h", label: "Réponse sous 24h ouvrées" },
+              { number: "6", label: "Services de rénovation" },
             ].map((s) => (
               <div key={s.label} className={styles.statCard}>
                 <div className={styles.statNumber}>{s.number}</div>
@@ -68,84 +46,14 @@ export function HeroSection({ className }: { className?: string }) {
           </div>
         </div>
 
-        {/* Right: lead-gen form */}
-        <div className={styles.formCard}>
-          {submitted ? (
-            <div className={styles.successState}>
-              <CheckCircle size={48} className={styles.successIcon} />
-              <h3>Merci !</h3>
-              <p>Nous vous contacterons dans les 24 h pour établir votre devis gratuit.</p>
-              <a href="tel:+33753381654" className={`btn btn-accent ${styles.callBtn}`}>
-                <Phone size={16} />
-                Appeler maintenant
-              </a>
-            </div>
-          ) : (
-            <>
-              <div className={styles.formHeader}>
-                <span className={styles.formTag}>Devis Gratuit</span>
-                <h2 className={styles.formTitle}>Obtenez votre devis en 24h</h2>
-                <p className={styles.formSub}>Réponse garantie, sans engagement</p>
-              </div>
-              <form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.field}>
-                  <label htmlFor="hero-name">Nom complet *</label>
-                  <input
-                    id="hero-name"
-                    name="name"
-                    type="text"
-                    placeholder="Jean Dupont"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="hero-phone">Téléphone *</label>
-                  <input
-                    id="hero-phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="06 00 00 00 00"
-                    value={form.phone}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="hero-service">Service souhaité *</label>
-                  <select
-                    id="hero-service"
-                    name="service"
-                    value={form.service}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Sélectionnez un service</option>
-                    {services.map((s) => (
-                      <option key={s} value={s}>{s}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className={styles.field}>
-                  <label htmlFor="hero-message">Description rapide</label>
-                  <textarea
-                    id="hero-message"
-                    name="message"
-                    rows={3}
-                    placeholder="Ex. : salon de 25m², peinture blanche..."
-                    value={form.message}
-                    onChange={handleChange}
-                  />
-                </div>
-                <button type="submit" className={`btn btn-accent ${styles.submitBtn}`} disabled={loading}>
-                  {loading ? "Envoi en cours..." : "Demander mon devis gratuit"}
-                  {!loading && <ArrowRight size={16} />}
-                </button>
-                <p className={styles.privacy}>🔒 Vos données restent confidentielles</p>
-              </form>
-            </>
-          )}
+        {/* Right: official GHL quote form */}
+        <div className={styles.formCard} id="devis-form">
+          <div className={styles.formHeader}>
+            <span className={styles.formTag}>Devis Gratuit</span>
+            <h2 className={styles.formTitle}>Obtenez votre devis gratuit</h2>
+            <p className={styles.formSub}>Sans engagement, réponse sous 24h ouvrées</p>
+          </div>
+          <GhlQuoteForm id="hero-devis" />
         </div>
       </div>
     </section>

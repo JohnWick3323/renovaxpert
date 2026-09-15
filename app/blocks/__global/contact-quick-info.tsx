@@ -1,21 +1,32 @@
 import { Phone, Mail, Clock } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
+import { trackClickToCall } from "~/lib/analytics";
 import styles from "./contact-quick-info.module.css";
 
 export function ContactQuickInfo({ className }: { className?: string }) {
   return (
     <div className={`${styles.bar} ${className ?? ""}`}>
       <div className={styles.inner}>
-        <a href="tel:+33753381654" className={styles.item}>
+        <a
+          href={siteConfig.phone.href}
+          className={styles.item}
+          onClick={() =>
+            trackClickToCall({
+              link_location: "top_header_bar",
+              page_path: typeof window !== "undefined" ? window.location.pathname : "/",
+            })
+          }
+        >
           <Phone size={14} className={styles.icon} />
-          <span>+33 7 53 38 16 54</span>
+          <span>{siteConfig.phone.display}</span>
         </a>
-        <a href="mailto:renovaxpert7@gmail.com" className={styles.item}>
+        <a href={`mailto:${siteConfig.email}`} className={styles.item}>
           <Mail size={14} className={styles.icon} />
-          <span>renovaxpert7@gmail.com</span>
+          <span>{siteConfig.email}</span>
         </a>
         <div className={styles.item}>
           <Clock size={14} className={styles.icon} />
-          <span>Lun-Ven: 8h-18h | Sam: 9h-13h</span>
+          <span>Réponse sous 24h ouvrées</span>
         </div>
       </div>
     </div>

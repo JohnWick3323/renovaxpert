@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Sparkles, CheckCircle2 } from "lucide-react";
+import { Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 import styles from "./nettoyage-section.module.css";
 
 const items = [
@@ -8,7 +8,7 @@ const items = [
   "Nettoyage complet de maison ou appartement",
   "Dépoussiérage, détachage, désinfection",
   "Nettoyage de vitres et menuiseries",
-  "Évacuation des déchets de chantier",
+  "Évacuation des résidus de chantier",
 ];
 
 export function NettoyageSection({ className }: { className?: string }) {
@@ -18,8 +18,8 @@ export function NettoyageSection({ className }: { className?: string }) {
         <div className={styles.grid}>
           <div className={styles.imageWrap}>
             <img
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop&q=80"
-              alt="Nettoyage après travaux RenovaXpert"
+              src="/images/services/nettoyage.webp"
+              alt="Nettoyage après travaux de rénovation"
             />
           </div>
           <div className={styles.content}>
@@ -28,8 +28,8 @@ export function NettoyageSection({ className }: { className?: string }) {
             </span>
             <h2>Service de Nettoyage Après Travaux</h2>
             <p>
-              Nous laissons vos espaces impeccables après chaque intervention. Notre équipe de nettoyage
-              professionnel garantit une propreté irréprochable et une livraison rapide.
+              Notre équipe intervient après vos travaux de rénovation pour une remise en état complète. Dépoussiérage
+              méticuleux, nettoyage des vitres et évacuation des résidus pour un intérieur impeccable prêt à vivre.
             </p>
             <ul className={styles.list}>
               {items.map((item) => (
@@ -39,9 +39,14 @@ export function NettoyageSection({ className }: { className?: string }) {
                 </li>
               ))}
             </ul>
-            <Link to="/contact" className="btn btn-primary">
-              Demander un Devis
-            </Link>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.5rem" }}>
+              <Link to="/services/nettoyage-apres-travaux-paris" className="btn btn-outline">
+                Découvrir la prestation <ArrowRight size={14} style={{ marginLeft: "0.25rem" }} />
+              </Link>
+              <Link to="/contact" className="btn btn-primary">
+                Demander un Devis
+              </Link>
+            </div>
           </div>
         </div>
       </div>

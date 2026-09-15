@@ -14,9 +14,11 @@ import { ContactQuickInfo } from "./blocks/__global/contact-quick-info";
 import { ServicesSummaryFooter } from "./blocks/__global/services-summary-footer";
 import { ContactLegalFooter } from "./blocks/__global/contact-legal-footer";
 import { SocialMediaCopyright } from "./blocks/__global/social-media-copyright";
+import { CookieConsent } from "./components/cookie-consent";
+import { siteConfig } from "./lib/site-config";
 
 export const meta: Route.MetaFunction = () => [
-  { name: "robots", content: "noindex, nofollow" },
+  { name: "robots", content: siteConfig.indexingEnabled ? "index, follow" : "noindex, nofollow" },
 ];
 
 export const links: Route.LinksFunction = () => [
@@ -37,6 +39,23 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+const gtmScript = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': 500
+});
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTCCG9RM');
+`;
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const { rootCssClass, resolvedScheme } = useColorScheme();
   return (
@@ -45,10 +64,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
+        {/* Google Consent Mode v2 default initialization and GTM container */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: gtmScript,
+          }}
+        />
         <script src={colorSchemeApi} data-light-class="light-theme" data-dark-class="dark-theme"></script>
         <Links />
       </head>
       <body>
+        {/* GTM noscript iframe fallback immediately after opening body */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PTCCG9RM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <header>
           <ContactQuickInfo />
           <NavigationHeader />
@@ -60,6 +95,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <SocialMediaCopyright />
         </footer>
 
+        <CookieConsent />
         <ScrollRestoration />
         <Scripts />
       </body>

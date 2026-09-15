@@ -32,6 +32,7 @@
 }
 
 .hero h1 {
+  color: #ffffff !important;
   font-size: var(--text-5xl);
   font-family: var(--family-display);
   font-weight: 800;

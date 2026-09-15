@@ -5,39 +5,39 @@ import styles from "./services-overview.module.css";
 const services = [
   {
     icon: <Paintbrush size={28} />,
-    title: "Peinture",
-    desc: "Intérieure et extérieure, finition professionnelle garantie.",
-    href: "/services#peinture",
+    title: "Peinture Intérieure",
+    desc: "Peinture murs et plafonds, préparation soignée des supports et finitions impeccables.",
+    href: "/services/peinture-interieure-paris",
   },
   {
     icon: <Layers size={28} />,
-    title: "Parquet",
-    desc: "Pose, sablage et vitrification pour un sol magnifique.",
-    href: "/services#parquet",
+    title: "Pose de Parquet",
+    desc: "Pose de parquet massif, contrecollé ou stratifié, ponçage et vitrification soignés.",
+    href: "/services/pose-parquet-paris",
   },
   {
     icon: <Grid3x3 size={28} />,
-    title: "Carrelage",
-    desc: "Sol et mur, pose précise et rendu professionnel.",
-    href: "/services#carrelage",
+    title: "Pose de Carrelage",
+    desc: "Pose de carrelage sol et mur pour pièces d'eau, cuisines et espaces de vie.",
+    href: "/services/pose-carrelage-paris",
   },
   {
     icon: <Leaf size={28} />,
-    title: "Sol Vinyle",
-    desc: "Durable, facile d'entretien, esthétique moderne.",
-    href: "/services#sol-vinyle",
-  },
-  {
-    icon: <Sparkles size={28} />,
-    title: "Nettoyage",
-    desc: "Après travaux, impeccable et prêt à vivre.",
-    href: "/services#nettoyage",
+    title: "Pose de Sol Vinyle",
+    desc: "Revêtement vinyle en lames ou dalles PVC (LVT), résistant, isolant et facile d'entretien.",
+    href: "/services/pose-sol-vinyle-paris",
   },
   {
     icon: <Square size={28} />,
-    title: "Pose de plaques de plâtre",
-    desc: "Cloisons, faux plafonds et finitions plâtre prêtes à peindre.",
-    href: "/services#drywall",
+    title: "Pose de Plaques de Plâtre",
+    desc: "Cloisons distributives, faux plafonds suspendus, doublages muraux et finitions lisses.",
+    href: "/services/pose-plaques-de-platre-paris",
+  },
+  {
+    icon: <Sparkles size={28} />,
+    title: "Nettoyage Après Travaux",
+    desc: "Remise en état intégrale, dépoussiérage méticuleux et fin de chantier pour intérieur prêt à vivre.",
+    href: "/services/nettoyage-apres-travaux-paris",
   },
 ];
 
@@ -46,8 +46,8 @@ export function ServicesOverview({ className }: { className?: string }) {
     <section className={`${styles.section} ${className ?? ""}`}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2>Nos Services de Rénovation</h2>
-          <p>Une offre complète pour rénover et embellir vos espaces intérieurs avec expertise.</p>
+          <h2>Nos Services de Rénovation Intérieure</h2>
+          <p>Nos artisans qualifiés réalisent tous vos travaux de second œuvre dans tout Paris et en proche couronne.</p>
         </div>
         <div className={styles.grid}>
           {services.map((s) => (
@@ -56,7 +56,7 @@ export function ServicesOverview({ className }: { className?: string }) {
               <div className={styles.cardTitle}>{s.title}</div>
               <p className={styles.cardDesc}>{s.desc}</p>
               <span className={styles.cardLink}>
-                En savoir plus <ArrowRight size={14} />
+                Découvrir la prestation <ArrowRight size={14} />
               </span>
             </Link>
           ))}

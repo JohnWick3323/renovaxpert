@@ -13,8 +13,8 @@ export function ContactHero({ className }: { className?: string }) {
         </div>
         <h1>Contactez-Nous</h1>
         <p>
-          Nous sommes à votre écoute pour tous vos projets de rénovation. Demandez votre devis gratuit
-          et recevez une réponse sous 24-48 heures.
+          Une question sur votre projet de rénovation ou envie d'obtenir un devis détaillé ? Notre équipe est à votre
+          écoute et répond à votre demande sous 24 heures ouvrées.
         </p>
       </div>
     </section>

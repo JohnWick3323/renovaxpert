@@ -1,0 +1,194 @@
+.section {
+  padding: var(--space-16, 4rem) 0;
+  background-color: var(--color-bg-alt, #f8fafc);
+  border-top: 1px solid var(--color-border-light, #e2e8f0);
+}
+
+.container {
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12, 3rem);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  background-color: rgba(10, 28, 60, 0.06);
+  color: var(--color-primary, #0a1c3c);
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full, 9999px);
+  margin-bottom: var(--space-3, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sectionTitle {
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: 700;
+  color: var(--color-text, #0a1c3c);
+  margin-bottom: var(--space-4, 1rem);
+  line-height: 1.3;
+}
+
+.leadText {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text, #2d3748);
+  line-height: 1.65;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.text {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-muted, #4a5568);
+  line-height: 1.6;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.textLink {
+  color: var(--color-primary, #0a1c3c);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.textLink:hover,
+.textLink:focus-visible {
+  color: var(--color-accent, #d97706);
+}
+
+.textLinkBold {
+  color: var(--color-primary, #0a1c3c);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+}
+
+.serviceList li {
+  font-size: var(--text-sm, 0.875rem);
+  line-height: 1.55;
+  color: var(--color-text, #2d3748);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.serviceList li::before {
+  content: "•";
+  color: var(--color-primary, #0a1c3c);
+  font-size: 1.25rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* ── City Grid ── */
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4, 1rem);
+  margin-top: var(--space-4, 1rem);
+}
+
+.cityCard {
+  background-color: var(--color-bg, #ffffff);
+  border: 1px solid var(--color-border-light, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-4, 1rem);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cityCard:hover,
+.cityCard:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 28, 60, 0.08);
+  border-color: var(--color-primary, #0a1c3c);
+  outline: none;
+}
+
+.cityName {
+  font-weight: 700;
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text, #0a1c3c);
+  margin-bottom: 0.25rem;
+}
+
+.cityDesc {
+  font-size: var(--text-xs, 0.75rem);
+  color: var(--color-text-muted, #718096);
+  line-height: 1.4;
+  margin-bottom: var(--space-3, 0.75rem);
+  flex-grow: 1;
+}
+
+.cityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 600;
+  color: var(--color-primary, #0a1c3c);
+}
+
+/* ── FAQ Section ── */
+.faqList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4, 1rem);
+  margin-top: var(--space-4, 1rem);
+}
+
+.faqItem {
+  background-color: var(--color-bg, #ffffff);
+  border: 1px solid var(--color-border-light, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-5, 1.25rem);
+}
+
+.faqQuestion {
+  font-size: var(--text-base, 1rem);
+  font-weight: 700;
+  color: var(--color-text, #0a1c3c);
+  margin-bottom: var(--space-2, 0.5rem);
+  line-height: 1.35;
+}
+
+.faqAnswer {
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--color-text-muted, #4a5568);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .cityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faqList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cityGrid {
+    grid-template-columns: 1fr;
+  }
+}

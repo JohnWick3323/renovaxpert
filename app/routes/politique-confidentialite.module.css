@@ -1,0 +1,113 @@
+.page {
+  background-color: var(--color-bg, #ffffff);
+  padding-bottom: var(--space-20, 5rem);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-bg-dark, #0a1c3c) 0%, var(--color-primary, #1a4f8a) 100%);
+  color: #ffffff;
+  padding: var(--space-12, 3rem) 0 var(--space-16, 4rem);
+}
+
+.inner {
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 1.5rem);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero h1,
+.hero .title,
+.title {
+  color: #ffffff !important;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.contentSection {
+  padding: var(--space-12, 3rem) 0;
+}
+
+.textBlock {
+  max-width: 860px;
+  color: var(--color-text, #2d3748);
+  line-height: 1.7;
+}
+
+.textBlock h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary, #0a1c3c);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light, #edf2f7);
+}
+
+.textBlock h2:first-of-type {
+  margin-top: 0;
+}
+
+.textBlock p {
+  margin-bottom: 1.25rem;
+}
+
+.textBlock ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.textBlock li {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: var(--color-primary, #0a1c3c);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--color-accent, #e5a823);
+}

@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
 import styles from "./contact-information.module.css";
 
 const cards = [
@@ -7,9 +8,9 @@ const cards = [
     title: "Téléphone",
     content: (
       <p>
-        <a href="tel:+33753381654">+33 7 53 38 16 54</a>
+        <a href={siteConfig.phone.href}>{siteConfig.phone.display}</a>
         <br />
-        Du lundi au vendredi 8h-18h
+        Réponse sous 24h ouvrées
       </p>
     ),
   },
@@ -18,7 +19,7 @@ const cards = [
     title: "Email",
     content: (
       <p>
-        <a href="mailto:renovaxpert7@gmail.com">renovaxpert7@gmail.com</a>
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
         <br />
         Réponse sous 24h ouvrées
       </p>
@@ -26,19 +27,15 @@ const cards = [
   },
   {
     icon: <MapPin size={24} />,
-    title: "Adresse",
-    content: <p>75 Rue de la Rénovation<br />75001 Paris, France</p>,
+    title: "Zone d'Intervention",
+    content: (
+      <p>
+        {siteConfig.serviceAreaLabel}
+        <br />
+        Intervention sur devis
+      </p>
+    ),
   },
-];
-
-const hours = [
-  { day: "Lundi", time: "8h00 - 18h00" },
-  { day: "Mardi", time: "8h00 - 18h00" },
-  { day: "Mercredi", time: "8h00 - 18h00" },
-  { day: "Jeudi", time: "8h00 - 18h00" },
-  { day: "Vendredi", time: "8h00 - 18h00" },
-  { day: "Samedi", time: "9h00 - 13h00" },
-  { day: "Dimanche", time: "Fermé", closed: true },
 ];
 
 export function ContactInformation({ className }: { className?: string }) {
@@ -59,13 +56,23 @@ export function ContactInformation({ className }: { className?: string }) {
           ))}
         </div>
         <div className={styles.hours}>
-          <h3>Horaires d'Ouverture</h3>
-          {hours.map((h) => (
-            <div key={h.day} className={styles.hourRow}>
-              <span className={styles.day}>{h.day}</span>
-              <span className={h.closed ? styles.closed : styles.time}>{h.time}</span>
-            </div>
-          ))}
+          <h3>Engagement &amp; Prise en Charge</h3>
+          <div className={styles.hourRow}>
+            <span className={styles.day}>Équipe</span>
+            <span className={styles.time}>Intervention directe RenovaXpert</span>
+          </div>
+          <div className={styles.hourRow}>
+            <span className={styles.day}>Délai de rappel</span>
+            <span className={styles.time}>Sous 24h ouvrées (appel ou formulaire)</span>
+          </div>
+          <div className={styles.hourRow}>
+            <span className={styles.day}>Secteur</span>
+            <span className={styles.time}>{siteConfig.serviceAreaLabel}</span>
+          </div>
+          <div className={styles.hourRow}>
+            <span className={styles.day}>Garantie</span>
+            <span className={styles.time}>Selon devis et contrat</span>
+          </div>
         </div>
       </div>
     </section>

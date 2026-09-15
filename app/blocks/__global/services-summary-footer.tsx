@@ -1,28 +1,30 @@
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router";
+import { siteConfig } from "~/lib/site-config";
 import styles from "./services-summary-footer.module.css";
 
 const services = [
-  { label: "Peinture Intérieure", href: "/services#peinture" },
-  { label: "Pose de Parquet", href: "/services#parquet" },
-  { label: "Carrelage Sol & Mur", href: "/services#carrelage" },
-  { label: "Sol Vinyle", href: "/services#sol-vinyle" },
-  { label: "Nettoyage Après Travaux", href: "/services#nettoyage" },
-  { label: "Pose de plaques de plâtre", href: "/services#drywall" },
+  { label: "Peinture Intérieure", href: "/services/peinture-interieure-paris" },
+  { label: "Pose de Parquet", href: "/services/pose-parquet-paris" },
+  { label: "Carrelage Sol & Mur", href: "/services/pose-carrelage-paris" },
+  { label: "Sol Vinyle & PVC", href: "/services/pose-sol-vinyle-paris" },
+  { label: "Pose de plaques de plâtre", href: "/services/pose-plaques-de-platre-paris" },
+  { label: "Nettoyage Après Travaux", href: "/services/nettoyage-apres-travaux-paris" },
 ];
 
 const pages = [
   { label: "Accueil", href: "/" },
   { label: "Nos Services", href: "/services" },
-  { label: "À Propos", href: "/about" },
+  { label: "Zones d'intervention", href: "/zones-intervention" },
+  { label: "À Propos", href: "/a-propos" },
   { label: "Contact", href: "/contact" },
 ];
 
 const contact = [
-  { label: "+33 7 53 38 16 54", href: "tel:+33753381654" },
-  { label: "renovaxpert7@gmail.com", href: "mailto:renovaxpert7@gmail.com" },
-  { label: "75 Rue de la Rénovation, Paris", href: "#" },
-  { label: "Lun-Ven: 8h-18h", href: "#" },
+  { label: siteConfig.phone.display, href: siteConfig.phone.href },
+  { label: siteConfig.email, href: `mailto:${siteConfig.email}` },
+  { label: siteConfig.serviceAreaLabel, href: "/zones-intervention" },
+  { label: "Réponse sous 24h ouvrées", href: "/contact" },
 ];
 
 export function ServicesSummaryFooter({ className }: { className?: string }) {
@@ -32,12 +34,12 @@ export function ServicesSummaryFooter({ className }: { className?: string }) {
         <div className={styles.brand}>
           <img
             src="/RenovaXpert-Logo-White-Final.png"
-            alt="RenovaXpert Rénovation"
+            alt={siteConfig.brandName}
             className={styles.brandLogo}
           />
           <p>
-            Spécialistes de la rénovation intérieure à Paris et en Île-de-France. Travail propre, rapide et professionnel
-            pour transformer vos espaces.
+            Entreprise de rénovation intérieure {siteConfig.serviceArea}. Notre équipe d'artisans réalise vos travaux
+            de peinture, sols, carrelage et plâtrerie avec exigence et professionnalisme.
           </p>
         </div>
         <div className={styles.column}>

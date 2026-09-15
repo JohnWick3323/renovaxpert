@@ -1,47 +1,25 @@
+import { Link } from "react-router";
+import { ArrowRight, ClipboardList, CalendarCheck, CheckCircle2 } from "lucide-react";
 import styles from "./recent-projects-gallery.module.css";
 
-const projects = [
+const steps = [
   {
-    tag: "Peinture",
-    title: "Salon Haussmannien - Paris 8e",
-    desc: "Rénovation complète avec peinture décorative et finitions soignées.",
-    before: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&auto=format&fit=crop&q=80",
+    tag: "Étape 1",
+    icon: <ClipboardList size={28} />,
+    title: "Votre Demande de Devis",
+    desc: "Décrivez votre projet via notre formulaire en ligne en précisant vos besoins (peinture, sol, cloisons) et votre localisation.",
   },
   {
-    tag: "Parquet",
-    title: "Appartement Modern - Levallois",
-    desc: "Pose de parquet chêne massif avec vitrification haute résistance.",
-    before: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&auto=format&fit=crop&q=80",
+    tag: "Étape 2",
+    icon: <CalendarCheck size={28} />,
+    title: "Étude du Projet & Visite",
+    desc: "Que vous nous contactiez par téléphone ou via formulaire, notre équipe vous répond sous 24 heures ouvrées pour convenir d'une visite sur place.",
   },
   {
-    tag: "Carrelage",
-    title: "Salle de Bain - Boulogne",
-    desc: "Pose de carrelage grand format avec joints fins et finitions impeccables.",
-    before: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    tag: "Sol Vinyle",
-    title: "Bureau Professionnel - La Défense",
-    desc: "Revêtement vinyle imitation bois pour un espace de travail contemporain.",
-    before: "https://images.unsplash.com/photo-1560440021-33f9b867899d?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    tag: "Nettoyage",
-    title: "Résidence Privée - Neuilly",
-    desc: "Nettoyage complet après travaux, livraison impeccable en 48h.",
-    before: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&auto=format&fit=crop&q=80",
-  },
-  {
-    tag: "Peinture",
-    title: "Chambre Parentale - Versailles",
-    desc: "Rénovation chambre avec peinture à la chaux et effets décoratifs.",
-    before: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&auto=format&fit=crop&q=80",
-    after: "https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&auto=format&fit=crop&q=80",
+    tag: "Étape 3",
+    icon: <CheckCircle2 size={28} />,
+    title: "Devis Clair & Réalisation",
+    desc: "Nous vous remettons un devis détaillé sans engagement. Après validation, nos artisans réalisent vos travaux dans le respect des délais.",
   },
 ];
 
@@ -50,30 +28,27 @@ export function RecentProjectsGallery({ className }: { className?: string }) {
     <section className={`${styles.section} ${className ?? ""}`}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2>Nos Réalisations Récentes</h2>
-          <p>Découvrez la transformation de nos derniers projets en avant/après</p>
+          <h2>Notre Méthode en 3 Étapes</h2>
+          <p>Un accompagnement clair et structuré, de l'étude de votre projet jusqu'aux finitions</p>
         </div>
         <div className={styles.grid}>
-          {projects.map((p) => (
-            <div key={p.title} className={styles.card}>
-              <div className={styles.images}>
-                <div className={styles.imgWrap}>
-                  <img src={p.before} alt={`Avant - ${p.title}`} />
-                  <span className={styles.labelBefore}>Avant</span>
-                </div>
-                <div className={styles.separator} />
-                <div className={styles.imgWrap}>
-                  <img src={p.after} alt={`Après - ${p.title}`} />
-                  <span className={styles.labelAfter}>Après</span>
-                </div>
-              </div>
+          {steps.map((s) => (
+            <div key={s.title} className={styles.card}>
               <div className={styles.body}>
-                <span className={styles.tag}>{p.tag}</span>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
+                <span className={styles.tag}>{s.tag}</span>
+                <div style={{ margin: "var(--space-2) 0", color: "var(--color-primary)" }}>
+                  {s.icon}
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "var(--space-8)" }}>
+          <Link to="/contact" className="btn btn-primary">
+            Demander mon devis gratuit <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </section>

@@ -1,27 +1,28 @@
 import { Link } from "react-router";
-import { Shield, Clock, Sparkles, Users, ArrowRight } from "lucide-react";
+import { ShieldCheck, Clock, Sparkles, MapPin, ArrowRight } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
 import styles from "./why-choose-us.module.css";
 
 const points = [
   {
-    icon: <Shield size={20} />,
-    title: "Travail Garanti",
-    desc: "Tous nos travaux sont garantis. Votre satisfaction est notre priorité absolue.",
+    icon: <ShieldCheck size={20} />,
+    title: "Travail Soigné & Garanti",
+    desc: "Nos travaux sont réalisés avec soin et garantis selon les conditions précisées dans le devis et le contrat.",
   },
   {
     icon: <Clock size={20} />,
-    title: "Rapidité d'Exécution",
-    desc: "Nous respectons les délais convenus et minimisons les perturbations dans votre quotidien.",
+    title: "Réactivité sous 24h",
+    desc: "Que votre demande arrive par téléphone ou via le formulaire, notre équipe vous répond sous 24 heures ouvrées pour convenir d'une visite.",
   },
   {
     icon: <Sparkles size={20} />,
-    title: "Propreté Impeccable",
-    desc: "Chantier propre du début à la fin. Nous nettoyons après chaque intervention.",
+    title: "Qualité d'Exécution",
+    desc: "De la préparation des supports jusqu'aux finitions, nos artisans assurent un suivi rigoureux sur chaque chantier.",
   },
   {
-    icon: <Users size={20} />,
-    title: "Équipe Expérimentée",
-    desc: "Plus de 12 ans d'expérience et plus de 500 projets réalisés avec excellence.",
+    icon: <MapPin size={20} />,
+    title: "Intervention Locale",
+    desc: `Notre équipe se déplace ${siteConfig.serviceArea} pour réaliser vos projets de rénovation intérieure.`,
   },
 ];
 
@@ -31,16 +32,16 @@ export function WhyChooseUs({ className }: { className?: string }) {
       <div className={styles.inner}>
         <div className={styles.imageWrap}>
           <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop&q=80"
-            alt="Équipe RenovaXpert au travail"
+            src="/images/why-choose-us.webp"
+            alt="Artisan effectuant des travaux de rénovation intérieure"
           />
         </div>
         <div className={styles.content}>
           <span className={styles.tag}>Pourquoi Nous Choisir</span>
-          <h2>Excellence et Professionnalisme à Votre Service</h2>
+          <h2>L'Exigence et le Savoir-Faire RenovaXpert</h2>
           <p>
-            RenovaXpert s'engage à fournir des rénovations de la plus haute qualité, avec une attention particulière
-            aux détails et une communication transparente tout au long du projet.
+            RenovaXpert prend en charge la rénovation de vos intérieurs avec une équipe expérimentée. Nous veillons
+            à la qualité d'exécution et au bon déroulement de votre chantier, avec une communication transparente.
           </p>
           <div className={styles.points}>
             {points.map((p) => (
@@ -53,7 +54,7 @@ export function WhyChooseUs({ className }: { className?: string }) {
               </div>
             ))}
           </div>
-          <Link to="/about" className="btn btn-primary">
+          <Link to="/a-propos" className="btn btn-primary">
             En Savoir Plus <ArrowRight size={16} />
           </Link>
         </div>

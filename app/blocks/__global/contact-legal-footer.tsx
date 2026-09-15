@@ -1,4 +1,8 @@
+import { Link } from "react-router";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
+import { openCookieSettings } from "~/components/cookie-consent";
+import { trackClickToCall } from "~/lib/analytics";
 import styles from "./contact-legal-footer.module.css";
 
 export function ContactLegalFooter({ className }: { className?: string }) {
@@ -6,25 +10,40 @@ export function ContactLegalFooter({ className }: { className?: string }) {
     <div className={`${styles.section} ${className ?? ""}`}>
       <div className={styles.inner}>
         <div className={styles.info}>
-          <a href="tel:+33753381654" className={styles.infoItem}>
+          <a
+            href={siteConfig.phone.href}
+            className={styles.infoItem}
+            onClick={() =>
+              trackClickToCall({
+                link_location: "footer_legal",
+                page_path: typeof window !== "undefined" ? window.location.pathname : "/",
+              })
+            }
+          >
             <Phone size={14} className={styles.icon} />
-            <span>+33 7 53 38 16 54</span>
+            <span>{siteConfig.phone.display}</span>
           </a>
-          <a href="mailto:renovaxpert7@gmail.com" className={styles.infoItem}>
+          <a href={`mailto:${siteConfig.email}`} className={styles.infoItem}>
             <Mail size={14} className={styles.icon} />
-            <span>renovaxpert7@gmail.com</span>
+            <span>{siteConfig.email}</span>
           </a>
           <div className={styles.infoItem}>
             <MapPin size={14} className={styles.icon} />
-            <span>75 Rue de la Rénovation, 75001 Paris</span>
+            <span>{siteConfig.serviceAreaLabel}</span>
           </div>
         </div>
         <div className={styles.legal}>
-          <a href="#" className={styles.legalLink}>Mentions légales</a>
+          <Link to="/politique-de-confidentialite" className={styles.legalLink}>
+            Politique de confidentialité
+          </Link>
           <span className={styles.separator}>|</span>
-          <a href="#" className={styles.legalLink}>Politique de confidentialité</a>
-          <span className={styles.separator}>|</span>
-          <a href="#" className={styles.legalLink}>CGV</a>
+          <button
+            type="button"
+            className={styles.cookieButton}
+            onClick={(e) => openCookieSettings(e.currentTarget)}
+          >
+            Gérer les cookies
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
- import { Square, CheckCircle2 } from "lucide-react";
+import { Square, CheckCircle2, ArrowRight } from "lucide-react";
 import styles from "./peinture-section.module.css";
 
 const items = [
@@ -18,18 +18,18 @@ export function DrywallSection({ className }: { className?: string }) {
         <div className={styles.grid}>
           <div className={styles.imageWrap}>
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80"
-              alt="Pose de placo RenovaXpert"
+              src="/images/services/drywall.webp"
+              alt="Pose de plaques de plâtre pour cloison intérieure"
             />
           </div>
           <div className={styles.content}>
             <span className={styles.tag}>
               <Square size={12} /> Pose de plaques de plâtre
             </span>
-            <h2>Pose de plaques de plâtre</h2>
+            <h2>Pose de plaques de plâtre / Plaquiste</h2>
             <p>
-              Nos poseurs de plaques de plâtre réalisent vos cloisons, faux plafonds et isolations avec
-              précision. Finitions lisses et parfaites, prêtes à recevoir peinture ou revêtement.
+              Nos artisans plaquistes réalisent vos cloisons, doublages isolants et faux plafonds en plaques de plâtre.
+              Surfaces planes et finitions soignées, prêtes à recevoir peinture ou revêtement décoratif.
             </p>
             <ul className={styles.list}>
               {items.map((item) => (
@@ -39,9 +39,14 @@ export function DrywallSection({ className }: { className?: string }) {
                 </li>
               ))}
             </ul>
-            <Link to="/contact" className="btn btn-primary">
-              Demander un Devis
-            </Link>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.5rem" }}>
+              <Link to="/services/pose-plaques-de-platre-paris" className="btn btn-outline">
+                Découvrir la prestation <ArrowRight size={14} style={{ marginLeft: "0.25rem" }} />
+              </Link>
+              <Link to="/contact" className="btn btn-primary">
+                Demander un Devis
+              </Link>
+            </div>
           </div>
         </div>
       </div>

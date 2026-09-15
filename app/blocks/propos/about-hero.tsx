@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { ChevronRight } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
 import styles from "./about-hero.module.css";
 
 export function AboutHero({ className }: { className?: string }) {
@@ -13,8 +14,8 @@ export function AboutHero({ className }: { className?: string }) {
         </div>
         <h1>À Propos de RenovaXpert</h1>
         <p>
-          Depuis plus de 12 ans, nous transformons les espaces intérieurs avec passion, expertise et
-          dévouement pour la satisfaction de nos clients.
+          Entreprise spécialisée dans la rénovation intérieure {siteConfig.serviceArea}. Notre équipe d'artisans met son
+          savoir-faire et son exigence au service de vos projets de peinture, revêtements de sol, carrelage et plâtrerie.
         </p>
       </div>
     </section>

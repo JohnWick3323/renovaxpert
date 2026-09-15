@@ -1,43 +1,44 @@
-import { Shield, Award, CheckCircle, Star } from "lucide-react";
+import { ShieldCheck, Award, CheckCircle, Clock, FileText, MapPin } from "lucide-react";
+import { siteConfig } from "~/lib/site-config";
 import styles from "./certifications-experience.module.css";
 
 const stats = [
-  { number: "12+", label: "Années d'Expérience" },
-  { number: "500+", label: "Projets Réalisés" },
-  { number: "98%", label: "Clients Satisfaits" },
-  { number: "15", label: "Artisans Qualifiés" },
+  { number: "Devis", label: "Gratuit & sans engagement" },
+  { number: "24h", label: "Délai de réponse ouvré" },
+  { number: "Paris", label: "Et proche couronne" },
+  { number: "6", label: "Prestations maîtrisées" },
 ];
 
-const certs = [
+const commitments = [
   {
-    icon: <Shield size={20} />,
-    title: "Garantie Décennale",
-    desc: "Tous nos travaux bénéficient d'une garantie décennale pour votre tranquillité.",
+    icon: <FileText size={20} />,
+    title: "Devis Gratuit & Sans Engagement",
+    desc: "Une estimation claire et détaillée remise avant tout démarrage de travaux, sans engagement financier.",
   },
   {
-    icon: <Award size={20} />,
-    title: "Artisan Qualifié RGE",
-    desc: "Reconnus Garants de l'Environnement, nous respectons les normes écologiques.",
+    icon: <MapPin size={20} />,
+    title: "Intervention Locale",
+    desc: `Notre équipe se déplace directement ${siteConfig.serviceArea} pour étudier et réaliser vos chantiers.`,
+  },
+  {
+    icon: <Clock size={20} />,
+    title: "Prise en Charge sous 24h",
+    desc: "Que vous nous contactiez par téléphone ou via formulaire, notre équipe vous répond sous 24 heures ouvrées pour étudier votre projet.",
   },
   {
     icon: <CheckCircle size={20} />,
-    title: "Assurance RC Pro",
-    desc: "Couverture intégrale responsabilité civile professionnelle pour chaque chantier.",
+    title: "Travaux Garantis",
+    desc: siteConfig.guaranteeStatement,
   },
   {
-    icon: <Star size={20} />,
-    title: "Note 4.9/5",
-    desc: "Notés 4.9/5 sur Google avec plus de 200 avis vérifiés de clients satisfaits.",
-  },
-  {
-    icon: <Shield size={20} />,
-    title: "Certification QUALIBAT",
-    desc: "Certification professionnelle attestant la qualification de nos artisans du bâtiment.",
+    icon: <ShieldCheck size={20} />,
+    title: "6 Domaines d'Intervention",
+    desc: "Peinture, parquet, carrelage, sol vinyle, nettoyage après chantier et pose de plaques de plâtre.",
   },
   {
     icon: <Award size={20} />,
-    title: "Devis Gratuit & Rapide",
-    desc: "Devis détaillé gratuit fourni sous 24-48h après visite de votre chantier.",
+    title: "Finitions Soignées",
+    desc: "Un travail soigné et un suivi rigoureux, de la préparation des surfaces jusqu'aux finitions.",
   },
 ];
 
@@ -46,8 +47,8 @@ export function CertificationsExperience({ className }: { className?: string }) 
     <section className={`${styles.section} ${className ?? ""}`}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2>Nos Certifications &amp; Chiffres Clés</h2>
-          <p>L'excellence prouvée par des années d'expérience et des certifications officielles</p>
+          <h2>Nos Engagements &amp; Garanties</h2>
+          <p>Une équipe engagée pour un travail soigné et un suivi attentif de chaque chantier</p>
         </div>
         <div className={styles.grid}>
           {stats.map((s) => (
@@ -58,7 +59,7 @@ export function CertificationsExperience({ className }: { className?: string }) 
           ))}
         </div>
         <div className={styles.certs}>
-          {certs.map((c) => (
+          {commitments.map((c) => (
             <div key={c.title} className={styles.cert}>
               <div className={styles.certIcon}>{c.icon}</div>
               <div className={styles.certText}>

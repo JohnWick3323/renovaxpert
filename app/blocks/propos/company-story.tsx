@@ -1,10 +1,11 @@
+import { siteConfig } from "~/lib/site-config";
 import styles from "./company-story.module.css";
 
-const milestones = [
-  { year: "2012", label: "Fondation de RenovaXpert" },
-  { year: "2016", label: "100 projets réalisés" },
-  { year: "2019", label: "Élargissement de l'équipe" },
-  { year: "2024", label: "500+ clients satisfaits" },
+const commitments = [
+  { val: "Devis", label: "Gratuit et sans engagement" },
+  { val: "24h", label: "Prise en charge sous 24h ouvrées" },
+  { val: "Paris", label: "Et proche couronne" },
+  { val: "6", label: "Corps d'état maîtrisés" },
 ];
 
 export function CompanyStory({ className }: { className?: string }) {
@@ -13,30 +14,29 @@ export function CompanyStory({ className }: { className?: string }) {
       <div className={styles.inner}>
         <div className={styles.imageWrap}>
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80"
-            alt="L'histoire de RenovaXpert"
+            src="/images/company-story.webp"
+            alt="Artisan effectuant des travaux de rénovation intérieure"
           />
         </div>
         <div className={styles.content}>
-          <span className={styles.tag}>Notre Histoire</span>
-          <h2>12 Ans de Passion pour la Rénovation</h2>
+          <span className={styles.tag}>Notre Engagement</span>
+          <h2>L'Exigence RenovaXpert pour Vos Projets</h2>
           <p>
-            Fondée en 2012 par Marc Bertrand, artisan peintre passionné, RenovaXpert est née d'une vision simple :
-            offrir des services de rénovation intérieure de qualité supérieure à des prix justes et transparents.
+            RenovaXpert est une entreprise de rénovation intérieure intervenant {siteConfig.serviceArea}. Notre équipe
+            prend en charge directement vos travaux afin de vous assurer un suivi rigoureux et des échanges directs.
           </p>
           <p>
-            Au fil des années, notre équipe s'est agrandie et diversifiée, intégrant des spécialistes du parquet,
-            du carrelage et des revêtements de sol. Aujourd'hui, RenovaXpert est une référence en Île-de-France
-            pour tous les travaux de rénovation intérieure.
+            Peinture, parquet, carrelage, sol vinyle, nettoyage de fin de chantier et pose de plaques de plâtre : nos
+            artisans expérimentés interviennent avec soin pour sublimer vos espaces intérieurs.
           </p>
           <p>
-            Notre mission : transformer vos espaces en lieux de vie magnifiques, dans les délais convenus et
-            avec la propreté qui nous caractérise.
+            Notre démarche : vous fournir une estimation claire et détaillée sans engagement, respecter les plannings
+            convenus et livrer des travaux soignés, garantis selon les conditions précisées dans le devis et le contrat.
           </p>
           <div className={styles.milestones}>
-            {milestones.map((m) => (
-              <div key={m.year} className={styles.milestone}>
-                <div className={styles.milestoneYear}>{m.year}</div>
+            {commitments.map((m) => (
+              <div key={m.label} className={styles.milestone}>
+                <div className={styles.milestoneYear}>{m.val}</div>
                 <div className={styles.milestoneLabel}>{m.label}</div>
               </div>
             ))}

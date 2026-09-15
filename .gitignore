@@ -7,5 +7,19 @@
 /.react-router/
 /build/
 .env
+.env.local
+.env.*.local
 
 .netlify
+
+# Credentials & Service Accounts
+*serviceaccount*.json
+*credentials*.json
+*disco-beanbag*.json
+seo-khata*.json
+*.pem
+*.key
+secrets/
+
+# Local visual QA artifacts must never be deployed from public/
+/public/qa-screenshots/

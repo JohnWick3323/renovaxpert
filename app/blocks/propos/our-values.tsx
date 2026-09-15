@@ -4,23 +4,23 @@ import styles from "./our-values.module.css";
 const values = [
   {
     icon: <Award size={24} />,
-    title: "Professionnalisme",
-    desc: "Chaque projet est traité avec le plus haut niveau de professionnalisme. Nous respectons les normes du secteur et utilisons uniquement des matériaux de qualité.",
+    title: "Savoir-Faire & Rigueur",
+    desc: "Chaque chantier est préparé et exécuté avec rigueur, dans le respect des règles de l'art et des matériaux choisis.",
   },
   {
     icon: <Sparkles size={24} />,
-    title: "Propreté",
-    desc: "La propreté est au cœur de notre travail. Nous maintenons un chantier propre et livrons vos espaces immaculés à la fin de chaque intervention.",
+    title: "Chantier Propre & Soigné",
+    desc: "La propreté est au cœur de notre méthode : protection méticuleuse des lieux et nettoyage soigné à chaque livraison.",
   },
   {
     icon: <Clock size={24} />,
-    title: "Rapidité",
-    desc: "Nous respectons les délais convenus et optimisons notre organisation pour minimiser les perturbations dans votre vie quotidienne.",
+    title: "Respect des Délais",
+    desc: "Nous nous engageons sur un planning précis et organisons nos interventions pour respecter les délais convenus.",
   },
   {
     icon: <Heart size={24} />,
-    title: "Satisfaction Client",
-    desc: "Votre satisfaction est notre priorité absolue. Nous œuvrons jusqu'à ce que vous soyez entièrement satisfait du résultat.",
+    title: "Écoute & Transparence",
+    desc: "Un accompagnement attentif dès la demande de devis, avec des explications claires et des conseils adaptés à votre projet.",
   },
 ];
 
@@ -29,8 +29,8 @@ export function OurValues({ className }: { className?: string }) {
     <section className={`${styles.section} ${className ?? ""}`}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <h2>Nos Valeurs Fondamentales</h2>
-          <p>Les principes qui guident chacune de nos interventions et définissent notre identité.</p>
+          <h2>Nos Principes de Travail</h2>
+          <p>Les engagements qui guident notre équipe sur chaque chantier de rénovation.</p>
         </div>
         <div className={styles.grid}>
           {values.map((v) => (

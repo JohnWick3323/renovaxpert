@@ -1,14 +1,14 @@
 import { Link } from "react-router";
-import { Layers, CheckCircle2 } from "lucide-react";
+import { Layers, CheckCircle2, ArrowRight } from "lucide-react";
 import styles from "./parquet-section.module.css";
 
 const items = [
   "Pose de parquet massif, contrecollé et stratifié",
-  "Sablage (ponçage) de parquet ancien",
-  "Vitrification et huilage pour protection durable",
-  "Réparation et remplacement de lames",
-  "Parquet flottant et collé",
-  "Finition mat, satin ou brillant au choix",
+  "Ponçage professionnel de parquet ancien",
+  "Vitrification et huilage haute résistance",
+  "Remplacement de lames et réparations",
+  "Pose flottante ou pose collée",
+  "Finitions mates, satinées ou vernies",
 ];
 
 export function ParquetSection({ className }: { className?: string }) {
@@ -20,10 +20,10 @@ export function ParquetSection({ className }: { className?: string }) {
             <span className={styles.tag}>
               <Layers size={12} /> Parquet
             </span>
-            <h2>Service de Pose et Rénovation Parquet</h2>
+            <h2>Service de Pose et Rénovation de Parquet</h2>
             <p>
-              De la pose à la finition, nos artisans spécialistes du parquet vous offrent un sol magnifique
-              et durable. Sablage précis, vitrification de qualité supérieure.
+              Nos artisans spécialistes du parquet prennent en charge la pose, le ponçage et la vitrification de vos
+              parquets massifs, contrecollés ou stratifiés. Des finitions chaleureuses et durables adaptées au style parisien.
             </p>
             <ul className={styles.list}>
               {items.map((item) => (
@@ -33,14 +33,19 @@ export function ParquetSection({ className }: { className?: string }) {
                 </li>
               ))}
             </ul>
-            <Link to="/contact" className="btn btn-primary">
-              Demander un Devis
-            </Link>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.5rem" }}>
+              <Link to="/services/pose-parquet-paris" className="btn btn-outline">
+                Découvrir la prestation <ArrowRight size={14} style={{ marginLeft: "0.25rem" }} />
+              </Link>
+              <Link to="/contact" className="btn btn-primary">
+                Demander un Devis
+              </Link>
+            </div>
           </div>
           <div className={styles.imageWrap}>
             <img
-              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=80"
-              alt="Pose de parquet RenovaXpert"
+              src="/images/services/parquet.webp"
+              alt="Pose et rénovation de parquet intérieur"
             />
           </div>
         </div>

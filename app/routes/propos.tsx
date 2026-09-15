@@ -1,16 +1,18 @@
 import type { Route } from "./+types/propos";
 import { AboutHero } from "~/blocks/propos/about-hero";
 import { CompanyStory } from "~/blocks/propos/company-story";
-import { TeamSection } from "~/blocks/propos/team-section";
 import { OurValues } from "~/blocks/propos/our-values";
 import { CertificationsExperience } from "~/blocks/propos/certifications-experience";
+import { buildMeta } from "~/lib/seo";
 import styles from "./propos.module.css";
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "À Propos - RenovaXpert Rénovation" },
-    { name: "description", content: "Découvrez l'histoire, l'équipe et les valeurs de RenovaXpert, votre expert en rénovation intérieure." },
-  ];
+  return buildMeta({
+    title: "À Propos de RenovaXpert - Entreprise de Rénovation à Paris",
+    description:
+      "Découvrez l'équipe, la méthode de travail et les engagements de RenovaXpert pour vos travaux de rénovation intérieure à Paris et proche couronne.",
+    pathname: "/a-propos",
+  });
 }
 
 export default function Propos() {
@@ -18,7 +20,6 @@ export default function Propos() {
     <main className={styles.page}>
       <AboutHero />
       <CompanyStory />
-      <TeamSection />
       <OurValues />
       <CertificationsExperience />
     </main>
