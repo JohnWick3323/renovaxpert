@@ -11,8 +11,8 @@ Toutes les URLs sources et licences listées ci-dessous ont été vérifiées av
 
 | Fichier Local | Page Source Photo | Auteur / Créateur | Plateforme | URL Licence | Date d'Accès | Utilisation |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `public/images/hero-bg.webp` | `https://www.pexels.com/photo/interior-of-a-contemporary-apartment-with-living-room-and-kitchen-6969866/` | Max Vakhtbovych | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Arrière-plan du Hero d'accueil |
-| `public/images/why-choose-us.webp` | `https://www.pexels.com/photo/man-painting-wall-with-roller-8005397/` | Blue Bird | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Section Pourquoi Nous Choisir (Accueil) |
+| `public/images/hero-bg.webp` | `https://www.pexels.com/photo/renovating-a-room-3616757/` | La Miko | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Arrière-plan du Hero d'accueil |
+| `public/images/why-choose-us.webp` | `https://www.pexels.com/photo/men-painting-a-room-5493650/` | Antoni Shkraba | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Section Pourquoi Nous Choisir (Accueil) |
 | `public/images/company-story.webp` | `https://www.pexels.com/photo/architect-working-on-a-blueprint-3760529/` | Andrea Piacquadio | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Section Histoire d'Entreprise (À Propos) |
 
 ---
@@ -22,11 +22,11 @@ Toutes les URLs sources et licences listées ci-dessous ont été vérifiées av
 | Fichier Local | Page Source Photo | Auteur / Créateur | Plateforme | URL Licence | Date d'Accès | Utilisation |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `public/images/services/peinture.webp` | `https://www.pexels.com/photo/person-painting-a-wall-1669754/` | Rosy / Badam L | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Peinture Intérieure |
-| `public/images/services/parquet.webp` | `https://www.pexels.com/photo/close-up-of-wooden-flooring-129731/` | Magda Ehlers | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Pose de Parquet |
-| `public/images/services/carrelage.webp` | `https://www.pexels.com/photo/modern-bathroom-interior-with-white-tiles-6585759/` | Max Vakhtbovych | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Pose de Carrelage |
-| `public/images/services/sol-vinyle.webp` | `https://www.pexels.com/photo/interior-of-modern-living-room-with-parquet-flooring-6969866/` | Max Vakhtbovych | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Pose de Sol Vinyle |
-| `public/images/services/drywall.webp` | `https://www.pexels.com/photo/drywall-installation-in-room-8961065/` | Tima Miroshnichenko | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Plaques de Plâtre |
-| `public/images/services/nettoyage.webp` | `https://www.pexels.com/photo/clean-and-empty-modern-room-7031406/` | Max Vakhtbovych | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Service Nettoyage Fin de Chantier |
+| `public/images/services/parquet.webp` | `https://www.pexels.com/photo/crop-man-installing-laminate-flooring-4263067/` | K | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Page Service Pose de Parquet |
+| `public/images/services/carrelage.webp` | `https://www.pexels.com/photo/construction-worker-laying-tile-in-renovation-project-29181494/` | Sergei Starostin | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Page Service Pose de Carrelage |
+| `public/images/services/sol-vinyle.webp` | `https://www.pexels.com/photo/person-using-dewalt-cordless-impact-driver-on-brown-board-1249611/` | Bidvine | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Page Service Pose de Sol Vinyle |
+| `public/images/services/drywall.webp` | `https://www.pexels.com/photo/a-man-fixing-the-wall-4981812/` | Antoni Shkraba | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Page Service Plaques de Plâtre |
+| `public/images/services/nettoyage.webp` | `https://www.pexels.com/photo/person-using-a-vacuum-on-floor-tiles-6195955/` | Tima Miroshnichenko | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Page Service Nettoyage Fin de Chantier |
 
 ---
 
@@ -34,7 +34,7 @@ Toutes les URLs sources et licences listées ci-dessous ont été vérifiées av
 
 | Fichier Local | Page Source Photo | Auteur / Créateur | Plateforme | URL Licence | Date d'Accès | Utilisation |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `public/images/zones/hub-paris-couronne.webp` | `https://www.pexels.com/photo/facade-of-residential-building-in-paris-161853/` | Florian Wehde | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Hub Zones d'Intervention |
+| `public/images/zones/hub-paris-couronne.webp` | `https://www.pexels.com/photo/facade-of-apartment-buildings-in-city-19518182/` | K | Pexels | `https://www.pexels.com/license/` | 2026-09-15 | Hub Zones d'Intervention |
 | `public/images/zones/boulogne-billancourt.webp` | `https://www.pexels.com/photo/modern-living-room-interior-1643383/` | Vecislavas Popa | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Locale Boulogne-Billancourt |
 | `public/images/zones/neuilly-sur-seine.webp` | `https://www.pexels.com/photo/luxury-living-room-interior-276554/` | Pixabay | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Locale Neuilly-sur-Seine |
 | `public/images/zones/levallois-perret.webp` | `https://www.pexels.com/photo/white-and-gray-living-room-interior-1457842/` | Jean van der Meulen | Pexels | `https://www.pexels.com/license/` | 2026-09-14 | Page Locale Levallois-Perret |

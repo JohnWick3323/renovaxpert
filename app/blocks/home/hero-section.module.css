@@ -27,17 +27,18 @@
   z-index: 1;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-16) var(--container-padding);
+  padding: clamp(2rem, 4vw, 3.5rem) var(--container-padding);
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: var(--space-10);
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
 
 /* ── Left side ── */
 .left {
   color: #fff;
+  padding-top: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 .badge {
@@ -167,6 +168,10 @@
     grid-template-columns: 1fr;
     gap: var(--space-8);
     padding: var(--space-12) var(--container-padding);
+  }
+
+  .left {
+    padding-top: 0;
   }
 
   .title {

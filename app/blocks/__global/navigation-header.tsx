@@ -88,24 +88,37 @@ export function NavigationHeader({ className }: { className?: string }) {
             Accueil
           </NavLink>
 
-          {/* Services Disclosure Navigation Pattern */}
+          {/* Direct services link plus an independent disclosure toggle. */}
           <div className={styles.disclosureContainer} ref={disclosureRef}>
-            <button
-              ref={triggerRef}
-              type="button"
-              id="services-trigger"
-              className={`${styles.dropdownTrigger} ${isServicesActive ? styles.navLinkActive : ""}`}
-              aria-expanded={servicesOpen}
-              aria-controls="services-submenu"
-              onClick={() => setServicesOpen((prev) => !prev)}
-            >
-              <span>Services</span>
-              <ChevronDown
-                size={16}
-                className={`${styles.chevron} ${servicesOpen ? styles.chevronRotated : ""}`}
-                aria-hidden="true"
-              />
-            </button>
+            <div className={styles.servicesControl}>
+              <NavLink
+                to="/services"
+                end
+                className={`${styles.navLink} ${styles.servicesLink} ${isServicesActive ? styles.navLinkActive : ""}`}
+                onClick={() => {
+                  setServicesOpen(false);
+                  setMenuOpen(false);
+                }}
+              >
+                Services
+              </NavLink>
+              <button
+                ref={triggerRef}
+                type="button"
+                id="services-trigger"
+                className={styles.dropdownToggle}
+                aria-label={servicesOpen ? "Fermer le sous-menu des services" : "Afficher le sous-menu des services"}
+                aria-expanded={servicesOpen}
+                aria-controls="services-submenu"
+                onClick={() => setServicesOpen((prev) => !prev)}
+              >
+                <ChevronDown
+                  size={16}
+                  className={`${styles.chevron} ${servicesOpen ? styles.chevronRotated : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
 
             {/* Submenu containing ordinary navigation links */}
             <div

@@ -1,5 +1,5 @@
 .page {
-  padding-bottom: var(--space-20, 5rem);
+  padding-bottom: 0;
   background-color: var(--color-bg, #ffffff);
 }
 
@@ -279,7 +279,7 @@
 }
 
 .quoteSection {
-  background-color: var(--color-bg-alt, #f7fafc);
+  background-color: var(--color-bg-alt, #f4f7fb);
   padding: var(--space-16, 4rem) 0;
   border-top: 1px solid var(--color-border-light, #e2e8f0);
 }

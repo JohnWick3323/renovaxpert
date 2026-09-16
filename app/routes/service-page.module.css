@@ -1,5 +1,5 @@
 .page {
-  padding-bottom: var(--space-20, 5rem);
+  padding-bottom: 0;
   background-color: var(--color-bg, #ffffff);
 }
 
@@ -260,7 +260,7 @@
 
 /* Quote Section */
 .quoteSection {
-  background: linear-gradient(135deg, var(--color-bg-alt, #f7fafc) 0%, #edf2f7 100%);
+  background: var(--color-bg-alt, #f4f7fb);
   padding: var(--space-16, 4rem) 0;
 }
 
