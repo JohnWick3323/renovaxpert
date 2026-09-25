@@ -95,13 +95,13 @@ test("Check 4 & 5 & 6: Une seule entité GeneralContractor, aucun faux LocalBusi
   }
 });
 
-test("Check 7: Le sitemap contient exactement les 15 URLs canoniques indexables", async () => {
+test("Check 7: Le sitemap contient l'ensemble des 123 URLs canoniques indexables", async () => {
   const response = await sitemapLoader({} as any);
   assert.equal(response.status, 200);
   const xml = await response.text();
 
   const matches = xml.match(/<loc>(.*?)<\/loc>/g) || [];
-  assert.equal(matches.length, 15, `Le sitemap doit contenir exactement 15 URLs canoniques (reçu: ${matches.length})`);
+  assert.equal(matches.length, 123, `Le sitemap doit contenir exactement 123 URLs canoniques (reçu: ${matches.length})`);
 
   for (const page of locationPages) {
     assert.ok(xml.includes(`<loc>https://renovaxpert.fr${page.expectedPath}</loc>`), `Sitemap doit inclure ${page.expectedPath}`);

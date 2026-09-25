@@ -18,14 +18,35 @@
 - Pose de plaques de plâtre / Plaquiste : https://renovaxpert.fr/services/pose-plaques-de-platre-paris
 - Nettoyage après travaux et fin de chantier : https://renovaxpert.fr/services/nettoyage-apres-travaux-paris
 
-## Zones d'intervention publiées
+## Zones d'intervention de Proche Couronne (16 Communes Couvertes)
 - Hub des zones couvertes : https://renovaxpert.fr/zones-intervention
-- Rénovation à Boulogne-Billancourt : https://renovaxpert.fr/renovation-interieure/boulogne-billancourt
-- Rénovation à Neuilly-sur-Seine : https://renovaxpert.fr/renovation-interieure/neuilly-sur-seine
-- Rénovation à Levallois-Perret : https://renovaxpert.fr/renovation-interieure/levallois-perret
-- Rénovation à Vincennes : https://renovaxpert.fr/renovation-interieure/vincennes
+- Boulogne-Billancourt (92100) : https://renovaxpert.fr/renovation-interieure/boulogne-billancourt
+- Neuilly-sur-Seine (92200) : https://renovaxpert.fr/renovation-interieure/neuilly-sur-seine
+- Levallois-Perret (92300) : https://renovaxpert.fr/renovation-interieure/levallois-perret
+- Courbevoie (92400) : https://renovaxpert.fr/renovation-interieure/courbevoie
+- Issy-les-Moulineaux (92130) : https://renovaxpert.fr/renovation-interieure/issy-les-moulineaux
+- Asnières-sur-Seine (92600) : https://renovaxpert.fr/renovation-interieure/asnieres-sur-seine
+- Rueil-Malmaison (92500) : https://renovaxpert.fr/renovation-interieure/rueil-malmaison
+- Clichy (92110) : https://renovaxpert.fr/renovation-interieure/clichy
+- Montrouge (92120) : https://renovaxpert.fr/renovation-interieure/montrouge
+- Puteaux (92800) : https://renovaxpert.fr/renovation-interieure/puteaux
+- Vincennes (94300) : https://renovaxpert.fr/renovation-interieure/vincennes
+- Saint-Maur-des-Fossés (94100) : https://renovaxpert.fr/renovation-interieure/saint-maur-des-fosses
+- Saint-Mandé (94160) : https://renovaxpert.fr/renovation-interieure/saint-mande
+- Charenton-le-Pont (94220) : https://renovaxpert.fr/renovation-interieure/charenton-le-pont
+- Nogent-sur-Marne (94130) : https://renovaxpert.fr/renovation-interieure/nogent-sur-marne
+- Montreuil (93100) : https://renovaxpert.fr/renovation-interieure/montreuil
 
-## Pages principales
+## Matrice Services × Communes
+Pour chacune des 16 communes ci-dessus, des pages dédiées par corps d'état sont disponibles :
+- Peinture intérieure : /renovation-interieure/{ville}/peinture-interieure
+- Pose de parquet : /renovation-interieure/{ville}/pose-parquet
+- Pose de carrelage : /renovation-interieure/{ville}/pose-carrelage
+- Pose de sol vinyle & LVT : /renovation-interieure/{ville}/pose-sol-vinyle
+- Plaquiste & cloisons en placo : /renovation-interieure/{ville}/plaquiste-placo
+- Nettoyage de fin de chantier : /renovation-interieure/{ville}/nettoyage-fin-de-chantier
+
+## Pages institutionnelles
 - Page d'accueil : https://renovaxpert.fr/
 - Répertoire des services : https://renovaxpert.fr/services
 - À Propos : https://renovaxpert.fr/a-propos

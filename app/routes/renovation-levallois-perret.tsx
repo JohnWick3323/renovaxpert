@@ -324,6 +324,31 @@ export default function RenovationLevallois() {
         </div>
       </section>
 
+      {/* Google Maps Embed */}
+      <section className={styles.section}>
+        <div className={styles.inner}>
+          <div className={styles.sectionHeader}>
+            <h2>Périmètre d'Intervention à Levallois-Perret</h2>
+            <p>
+              Nos équipes d'artisans interviennent dans l'ensemble des quartiers de Levallois-Perret (92300) et ses environs immédiats.
+            </p>
+          </div>
+
+          <div style={{ borderRadius: "16px", overflow: "hidden", border: "1px solid var(--color-border, #e2e8f0)", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }}>
+            <iframe
+              src="https://maps.google.com/maps?q=Levallois-Perret%2C%2092300%2C%20France&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="380"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Carte de la zone d'intervention à Levallois-Perret"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className={styles.inner}>

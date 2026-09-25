@@ -14,6 +14,8 @@ export default [
   route("/renovation-interieure/neuilly-sur-seine", "routes/renovation-neuilly-sur-seine.tsx"),
   route("/renovation-interieure/levallois-perret", "routes/renovation-levallois-perret.tsx"),
   route("/renovation-interieure/vincennes", "routes/renovation-vincennes.tsx"),
+  route("/renovation-interieure/:ville/:service", "routes/renovation-city-service.tsx"),
+  route("/renovation-interieure/:ville", "routes/renovation-city-hub.tsx"),
   route("/a-propos", "routes/propos.tsx"),
   route("/about", "routes/about-redirect.tsx"),
   route("/contact", "routes/contact.tsx"),
