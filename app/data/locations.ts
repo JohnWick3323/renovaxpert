@@ -338,7 +338,7 @@ export const locationsData: LocationData[] = [
     accessLogistics:
       "Rues calmes et maillage urbain dense limitrophe du 14e arrondissement. Dépose aisée des matériaux aux premières heures de la matinée et protection des cages d'immeubles traditionnelles.",
     directAnswer:
-      "À Montrouge (92120), confiez vos projets de rénovation intérieure à RenovaXpert : peinture soignée, réfection de parquets d'époque, pose de carrelage et cloisons sèches. Intervention sous 24 à 48h ouvrées pour une étude gratuite sur place.",
+      "À Montrouge (92120), confiez vos projets de rénovation intérieure à RenovaXpert : peinture soignée, réfection de parquets d'époque, pose de carrelage et cloisons sèches. Intervention sous 24 à 48h ouvrées pour une étude technique et devis gratuit sur place.",
     heroImage: "/images/zones/boulogne-billancourt.webp",
     localFaqs: [
       {
@@ -564,7 +564,7 @@ export const locationsData: LocationData[] = [
     accessLogistics:
       "Voirie résidentielle aérée facilitant les opérations de livraison. Équipes équipées de bâches épaisses et de protections d'escalier pour garantir une propreté constante du chantier.",
     directAnswer:
-      "À Nogent-sur-Marne (94130), RenovaXpert réalise vos projets de rénovation d'appartements et maisons : parquets massifs ou contrecollés, carrelages design, cloisons phoniques et peintures veloutées. Réponse sous 24h ouvrées par nos artisans et devis gratuit.",
+      "À Nogent-sur-Marne (94130), RenovaXpert réalise vos projets de rénovation complète d'appartements et maisons : parquets massifs ou contrecollés, carrelages design, cloisons phoniques et peintures veloutées. Réponse sous 24h ouvrées par nos artisans pour étude sur place et devis gratuit.",
     heroImage: "/images/zones/vincennes.webp",
     localFaqs: [
       {
