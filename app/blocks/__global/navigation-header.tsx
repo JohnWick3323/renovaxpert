@@ -6,6 +6,7 @@ import styles from "./navigation-header.module.css";
 
 const serviceLinks = [
   { label: "Rénovation intérieure (Tous nos services)", path: "/services" },
+  { label: "Rénovation d'appartement complète", path: "/services/renovation-appartement-paris" },
   { label: "Peinture intérieure", path: "/services/peinture-interieure-paris" },
   { label: "Pose de parquet", path: "/services/pose-parquet-paris" },
   { label: "Pose de carrelage", path: "/services/pose-carrelage-paris" },

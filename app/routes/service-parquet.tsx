@@ -7,9 +7,9 @@ import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import styles from "./service-page.module.css";
 
 const canonicalPath = "/services/pose-parquet-paris";
-const pageTitle = "Pose et Rénovation de Parquet à Paris | Artisans RenovaXpert";
+const pageTitle = "Entreprise de Parquet & Poseur Parquet à Paris | RenovaXpert";
 const pageDescription =
-  "Pose de parquet massif, contrecollé et stratifié, ponçage et vitrification à Paris et proche couronne par notre équipe d'artisans. Travail soigné et devis gratuit.";
+  "Entreprise de parquet à Paris : pose, ponçage sans poussière et rénovation de parquets anciens (point de Hongrie, massif, contrecollé). Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({
@@ -136,54 +136,54 @@ export default function ServiceParquet() {
       <section className={styles.section}>
         <div className={styles.inner}>
           <div className={styles.sectionHeader}>
-            <h2>Nos Prestations pour Vos Parquets à Paris</h2>
+            <h2>Entreprise de Parquet à Paris : Pose Flottante, Collée & Rénovation Complète</h2>
             <p>
-              Du diagnostic de votre support jusqu'au traitement de finition, nous intervenons avec rigueur pour donner
-              de la valeur et du confort à votre intérieur.
+              Spécialiste du parquet et artisan parqueteur à Paris : du diagnostic de planéité jusqu'à la vitrification
+              écologique, nous réalisons tous travaux de parqueterie dans les règles de l'art du DTU 51.
             </p>
           </div>
 
           <div className={styles.grid3}>
             <div className={styles.card}>
-              <h3>Pose de Parquet Massif</h3>
+              <h3>Pose de Parquet Massif & Chêne Noble</h3>
               <p>
                 Pose collée en plein ou clouée sur lambourdes selon la configuration de votre plancher. Choix des essences
                 nobles (chêne français, bois exotiques) pour une longévité d'exception.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Pose de Parquet Contrecollé</h3>
+              <h3>Pose de Parquet Contrecollé & Sous-Couche 21 dB</h3>
               <p>
-                Installation flottante ou collée de parquets contrecollés haut de gamme. Excellente tenue dans le temps,
-                compatibilité avec plancher chauffant et large choix de largeurs de lames.
+                Installation flottante ou collée de parquets contrecollés haut de gamme. Sous-couche acoustique résiliente
+                certifiée 19 à 21 dB conforme aux règlements de copropriété parisiens.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Sols Stratifiés</h3>
+              <h3>Sols Stratifiés Résistants</h3>
               <p>
                 Pose rapide et soignée de revêtements stratifiés résistants aux passages fréquents, accompagnés de
-                sous-couches d'isolation acoustique adaptées aux exigences des copropriétés.
+                sous-couches d'isolation acoustique adaptées aux appartements parisiens.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Ponçage et Sablage de Parquet</h3>
+              <h3>Ponçage sans Poussière & Aspiration Cyclonique</h3>
               <p>
-                Ponçage mécanique en trois passes successives (gros grain, grain moyen, grain fin) avec machines équipées
-                d'aspiration professionnelle pour un chantier propre et des lames remises à nu.
+                Ponçage mécanique en trois passes successives (grain 36, 80, 120) avec machines équipées d'aspiration
+                cyclonique haute efficacité pour un chantier propre sans poussière résiduelle.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Vitrification et Huilage</h3>
+              <h3>Vitrification Écologique & Huilage</h3>
               <p>
-                Application de 2 à 3 couches de vitrificateur haute résistance (mat, satiné, aspect cire ou invisible)
-                ou d'huile naturelle pour nourrir le bois en profondeur.
+                Application de 2 à 3 couches de vitrificateur haute résistance sans odeur ni COV (mat, satiné, aspect cire
+                ou invisible) ou d'huile naturelle pour nourrir le bois en profondeur.
               </p>
             </div>
             <div className={styles.card}>
-              <h3>Réparation et Remplacement de Lames</h3>
+              <h3>Restauration de Parquet Ancien & Point de Hongrie</h3>
               <p>
-                Restauration des lames fendues, recollement des parties disjointes, calfeutrement des fentes et
-                remplacement des pièces vermoulues ou tachées par des bois d'époque équivalents.
+                Rénovation de parquets anciens haussmanniens : remplacement des lames fendues, recollement, masticage des
+                fentes et pose traditionnelle à chevrons ou point de Hongrie.
               </p>
             </div>
           </div>
@@ -400,20 +400,28 @@ export default function ServiceParquet() {
           </div>
 
           <div className={styles.relatedLinks}>
-            <Link to="/zones-intervention" className={styles.relatedLink}>
-              <span>Zones d'intervention (Paris &amp; Proche Couronne)</span>
+            <Link to="/renovation-interieure/boulogne-billancourt/pose-parquet" className={styles.relatedLink}>
+              <span>Pose & Rénovation de Parquet à Boulogne-Billancourt (92100)</span>
               <ArrowRight size={14} aria-hidden="true" />
             </Link>
-            <Link to="/services/peinture-interieure-paris" className={styles.relatedLink}>
-              <span>Peinture Intérieure Murs et Plafonds</span>
+            <Link to="/renovation-interieure/neuilly-sur-seine/pose-parquet" className={styles.relatedLink}>
+              <span>Restauration Parquet Point de Hongrie à Neuilly-sur-Seine (92200)</span>
+              <ArrowRight size={14} aria-hidden="true" />
+            </Link>
+            <Link to="/renovation-interieure/issy-les-moulineaux/pose-parquet" className={styles.relatedLink}>
+              <span>Pose Parquet & Sous-Couche Acoustique à Issy-les-Moulineaux (92130)</span>
+              <ArrowRight size={14} aria-hidden="true" />
+            </Link>
+            <Link to="/renovation-interieure/vincennes/pose-parquet" className={styles.relatedLink}>
+              <span>Artisan Poseur de Parquet à Vincennes (94300)</span>
               <ArrowRight size={14} aria-hidden="true" />
             </Link>
             <Link to="/services/pose-sol-vinyle-paris" className={styles.relatedLink}>
-              <span>Pose de Sol Vinyle et PVC</span>
+              <span>Pose de Sol Vinyle et Lames PVC (LVT)</span>
               <ArrowRight size={14} aria-hidden="true" />
             </Link>
-            <Link to="/services/pose-carrelage-paris" className={styles.relatedLink}>
-              <span>Pose de Carrelage Sol &amp; Mur</span>
+            <Link to="/zones-intervention" className={styles.relatedLink}>
+              <span>Toutes nos zones d'intervention (Paris & Proche Couronne)</span>
               <ArrowRight size={14} aria-hidden="true" />
             </Link>
           </div>

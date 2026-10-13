@@ -4,6 +4,7 @@ import { siteConfig } from "~/lib/site-config";
 import styles from "./services-summary-footer.module.css";
 
 const services = [
+  { label: "Rénovation d'Appartement", href: "/services/renovation-appartement-paris" },
   { label: "Peinture Intérieure", href: "/services/peinture-interieure-paris" },
   { label: "Pose de Parquet", href: "/services/pose-parquet-paris" },
   { label: "Carrelage Sol & Mur", href: "/services/pose-carrelage-paris" },

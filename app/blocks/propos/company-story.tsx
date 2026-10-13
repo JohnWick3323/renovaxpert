@@ -22,7 +22,7 @@ export function CompanyStory({ className }: { className?: string }) {
           <span className={styles.tag}>Notre Engagement</span>
           <h2>L'Exigence RenovaXpert pour Vos Projets</h2>
           <p>
-            RenovaXpert est une entreprise de rénovation intérieure intervenant {siteConfig.serviceArea}. Notre équipe
+            RenovaXpert (également connu sous le nom Renova Expert) est une entreprise de rénovation intérieure intervenant {siteConfig.serviceArea}. Notre équipe
             prend en charge directement vos travaux afin de vous assurer un suivi rigoureux et des échanges directs.
           </p>
           <p>

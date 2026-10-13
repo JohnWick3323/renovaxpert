@@ -6,6 +6,7 @@ import { RecentProjectsGallery } from "~/blocks/home/recent-projects-gallery";
 import { HomeGuideFaq } from "~/blocks/home/home-guide-faq";
 import { CallToActionQuote } from "~/blocks/home/call-to-action-quote";
 import { siteConfig } from "~/lib/site-config";
+import { locationsData } from "~/data/locations";
 import { buildMeta } from "~/lib/seo";
 import styles from "./home.module.css";
 
@@ -29,6 +30,7 @@ const homeSchema = {
       "@type": "GeneralContractor",
       "@id": siteConfig.entityId,
       "name": siteConfig.brandName,
+      "alternateName": siteConfig.brandAliases,
       "url": "https://renovaxpert.fr/",
       "logo": siteConfig.logoUrl,
       "telephone": siteConfig.phone.international,
@@ -44,22 +46,15 @@ const homeSchema = {
           "@type": "AdministrativeArea",
           "name": "Proche couronne",
         },
-        {
+        ...locationsData.map((loc) => ({
           "@type": "City",
-          "name": "Boulogne-Billancourt",
-        },
-        {
-          "@type": "City",
-          "name": "Neuilly-sur-Seine",
-        },
-        {
-          "@type": "City",
-          "name": "Levallois-Perret",
-        },
-        {
-          "@type": "City",
-          "name": "Vincennes",
-        },
+          "name": loc.name,
+          "postalCode": loc.postalCodes,
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": loc.department,
+          },
+        })),
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

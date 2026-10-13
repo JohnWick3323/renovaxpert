@@ -4,12 +4,18 @@ import styles from "./location-map.module.css";
 const zones = [
   "Paris (tous arrondissements)",
   "Boulogne-Billancourt",
-  "Levallois-Perret",
   "Neuilly-sur-Seine",
-  "Versailles",
-  "La Défense",
+  "Levallois-Perret",
+  "Courbevoie",
+  "Issy-les-Moulineaux",
   "Vincennes",
-  "Saint-Denis",
+  "Asnières-sur-Seine",
+  "Rueil-Malmaison",
+  "Clichy",
+  "Montrouge",
+  "Puteaux",
+  "Saint-Maur-des-Fossés",
+  "Montreuil",
 ];
 
 export function LocationMap({ className }: { className?: string }) {

@@ -7,6 +7,7 @@
 
 export const siteConfig = {
   brandName: "RenovaXpert",
+  brandAliases: ["Renova Expert", "Renov Expert", "RenovaXpert Paris", "Renova Expert Paris"],
   canonicalOrigin: "https://renovaxpert.fr",
   entityId: "https://renovaxpert.fr/#organization",
   websiteId: "https://renovaxpert.fr/#website",
@@ -39,6 +40,20 @@ export const siteConfig = {
   },
 
   servicesList: [
+    {
+      id: "renovation-appartement",
+      name: "Rénovation d'Appartement",
+      slug: "renovation-appartement-paris",
+      path: "/services/renovation-appartement-paris",
+      serviceType: "Rénovation complète d'appartement et second œuvre",
+      shortDesc:
+        "Rénovation complète tous corps d'état d'appartements à Paris et proche couronne par notre propre équipe.",
+      relatedSlugs: [
+        "peinture-interieure-paris",
+        "pose-parquet-paris",
+        "pose-carrelage-paris",
+      ],
+    },
     {
       id: "peinture",
       name: "Peinture Intérieure",

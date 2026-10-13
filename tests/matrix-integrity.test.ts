@@ -168,17 +168,17 @@ test("Check M5: Audit Anti-Doorway - Similarité Jaccard 3-gramme strictement < 
   }
 });
 
-test("Check M6: Le Sitemap dynamique contient exactement 123 URLs uniques sans doublons", async () => {
+test("Check M6: Le Sitemap dynamique contient exactement 124 URLs uniques sans doublons", async () => {
   const response = await sitemapLoader({} as any);
   assert.equal(response.status, 200);
   const xml = await response.text();
 
   const matches = xml.match(/<loc>(.*?)<\/loc>/g) || [];
-  assert.equal(matches.length, 123, `Le sitemap doit contenir exactement 123 URLs (reçu: ${matches.length})`);
+  assert.equal(matches.length, 124, `Le sitemap doit contenir exactement 124 URLs (reçu: ${matches.length})`);
 
   const urls = matches.map((m) => m.replace(/<\/?loc>/g, ""));
   const uniqueUrls = new Set(urls);
-  assert.equal(uniqueUrls.size, 123, `Doublons détectés dans le sitemap: ${urls.length - uniqueUrls.size} doublons`);
+  assert.equal(uniqueUrls.size, 124, `Doublons détectés dans le sitemap: ${urls.length - uniqueUrls.size} doublons`);
 
   for (const url of uniqueUrls) {
     assert.ok(url.startsWith("https://renovaxpert.fr"), `URL non-apex dans le sitemap: ${url}`);

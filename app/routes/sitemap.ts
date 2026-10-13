@@ -18,6 +18,7 @@ export function loader({}: Route.LoaderArgs) {
   const basePaths = [
     "",
     "/services",
+    "/services/renovation-appartement-paris",
     "/services/peinture-interieure-paris",
     "/services/pose-parquet-paris",
     "/services/pose-carrelage-paris",

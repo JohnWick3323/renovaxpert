@@ -7,9 +7,9 @@ import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import styles from "./service-page.module.css";
 
 const canonicalPath = "/services/pose-sol-vinyle-paris";
-const pageTitle = "Pose de Sol Vinyle et PVC à Paris | Artisans RenovaXpert";
+const pageTitle = "Pose de Sol en Vinyle et Lames PVC (LVT) à Paris | RenovaXpert";
 const pageDescription =
-  "Pose de sol vinyle et dalles PVC (LVT) à Paris et proche couronne par notre équipe d'artisans. Revêtements modernes, résistants et isolants. Devis gratuit.";
+  "Spécialiste de la pose de sol en vinyle et dalles PVC (LVT) à Paris et proche couronne : étanche, isolant et sans travaux lourds. Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({
@@ -136,7 +136,7 @@ export default function ServiceSolVinyle() {
       <section className={styles.section}>
         <div className={styles.inner}>
           <div className={styles.sectionHeader}>
-            <h2>Une Prestation Complète de Pose de Sol Vinyle</h2>
+            <h2>Spécialiste de la Pose de Sol en Vinyle à Paris et Proche Couronne</h2>
             <p>
               Pour un rendu parfait sans vagues ni désaffleurement, nous apportons un soin minutieux à la préparation du
               sol et à la précision des découpes.

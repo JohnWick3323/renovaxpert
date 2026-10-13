@@ -53,13 +53,14 @@ def run_nexus_pipeline():
     with open(sitemap_file, "r", encoding="utf-8") as f:
         sitemap_code = f.read()
 
-    expected_total_urls = 11 + len(city_slugs) + (len(city_slugs) * len(service_slugs))
+    expected_total_urls = 12 + len(city_slugs) + (len(city_slugs) * len(service_slugs))
     print(f"🔍 Audit du Sitemap : {expected_total_urls} URLs canoniques attendues...")
 
     all_canonical_urls = set()
     # Base
     base_routes = [
         "", "/services",
+        "/services/renovation-appartement-paris",
         "/services/peinture-interieure-paris",
         "/services/pose-parquet-paris",
         "/services/pose-carrelage-paris",

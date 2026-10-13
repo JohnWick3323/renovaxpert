@@ -3,6 +3,7 @@ import { ChevronRight, ArrowRight } from "lucide-react";
 import styles from "./services-hero.module.css";
 
 const tabs = [
+  { label: "Rénovation d'Appartement", href: "/services/renovation-appartement-paris" },
   { label: "Peinture Intérieure", href: "/services/peinture-interieure-paris" },
   { label: "Pose de Parquet", href: "/services/pose-parquet-paris" },
   { label: "Pose de Carrelage", href: "/services/pose-carrelage-paris" },

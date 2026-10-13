@@ -1,8 +1,14 @@
 import { Link } from "react-router";
-import { Paintbrush, Layers, Grid3x3, Leaf, Sparkles, Square, ArrowRight } from "lucide-react";
+import { Home, Paintbrush, Layers, Grid3x3, Leaf, Sparkles, Square, ArrowRight } from "lucide-react";
 import styles from "./services-overview.module.css";
 
 const services = [
+  {
+    icon: <Home size={28} />,
+    title: "Rénovation d'Appartement",
+    desc: "Rénovation complète tous corps d'état, réagencement des espaces, respect des copropriétés et finitions soignées.",
+    href: "/services/renovation-appartement-paris",
+  },
   {
     icon: <Paintbrush size={28} />,
     title: "Peinture Intérieure",
