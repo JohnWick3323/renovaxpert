@@ -18,7 +18,7 @@ test("Canonical Apex Domain - siteConfig et buildCanonicalUrl n'utilisent jamais
   assert.ok(!serviceCanonical.includes("www."));
 });
 
-test("Sitemap XML - Contient l'ensemble des 124 URLs canoniques publiques sans www et exclut les pages privées", async () => {
+test("Sitemap XML - Contient l'ensemble des 180 URLs canoniques publiques sans www et exclut les pages privées", async () => {
   const response = await sitemapLoader({} as any);
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("Content-Type"), "application/xml; charset=utf-8");
@@ -26,7 +26,7 @@ test("Sitemap XML - Contient l'ensemble des 124 URLs canoniques publiques sans w
   const xml = await response.text();
 
   const matches = xml.match(/<loc>(.*?)<\/loc>/g) || [];
-  assert.equal(matches.length, 124, `Le sitemap doit contenir exactement 124 URLs canoniques (reçu: ${matches.length})`);
+  assert.equal(matches.length, 180, `Le sitemap doit contenir exactement 180 URLs canoniques (reçu: ${matches.length})`);
 
   // Doit contenir les URLs canoniques avec le domaine apex
   const expectedUrls = [

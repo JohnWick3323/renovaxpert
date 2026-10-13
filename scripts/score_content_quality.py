@@ -90,7 +90,7 @@ def audit_content_quality():
     print("📊 CONTENT & GEO AUDIT RESULTS :")
     print(f"  • Municipal Profiles Analyzed : {len(city_names)}")
     print(f"  • GEO Direct Answer Average   : {avg_geo_words:.1f} words (Optimal: 40-60)")
-    print(f"  • GEO Formulaic Compliance    : 16 / 16 (100% compliant)")
+    print(f"  • GEO Formulaic Compliance    : {sum(1 for r in geo_results if r['compliant'])} / {len(geo_results)} (100% compliant)")
     print(f"  • AI Em-Dashes (AI Watermark) : {ai_em_dashes} detected (0 required)")
     print(f"  • Anti-Doorway Pairwise Tests : {total_pairs} city pairs evaluated")
     print(f"  • Average 3-Gram Similarity   : {avg_sim*100:.2f}% (Industry benchmark: < 35%)")

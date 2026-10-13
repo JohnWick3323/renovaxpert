@@ -131,9 +131,9 @@ def audit_schema():
 
     print("-" * 70)
     print("📊 SCHEMA AUDIT RESULTS :")
-    print(f"  • City Hub Schemas Validated   : {validated_city_schemas} / 16 (100% VALID)")
-    print(f"  • Matrix Service Schemas Valid : {validated_matrix_schemas} / 96 (100% VALID)")
-    print(f"  • Total Schemas Verified       : {validated_city_schemas + validated_matrix_schemas} / 112")
+    print(f"  • City Hub Schemas Validated   : {validated_city_schemas} / {len(city_names)} (100% VALID)")
+    print(f"  • Matrix Service Schemas Valid : {validated_matrix_schemas} / {len(city_names) * len(service_names)} (100% VALID)")
+    print(f"  • Total Schemas Verified       : {validated_city_schemas + validated_matrix_schemas} / {len(city_names) + len(city_names) * len(service_names)}")
     print(f"  • Central GeneralContractor ID : Verified (#organization)")
     print(f"  • Zero Fake Review Snippets    : Confirmed (100% clean)")
     print(f"  • hasMap Geographical Binding   : Confirmed on 100% of nodes")

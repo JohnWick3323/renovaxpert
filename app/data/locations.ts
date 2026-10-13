@@ -626,6 +626,305 @@ export const locationsData: LocationData[] = [
     ],
     neighboringSlugs: ["vincennes", "saint-mande", "bagnolet", "fontenay-sous-bois"],
   },
+  // ========================================================
+  // EXPANSION PETITE COURONNE (92, 93, 94)
+  // ========================================================
+  {
+    slug: "saint-cloud",
+    name: "Saint-Cloud",
+    postalCodes: "92210",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "30 000 hab.",
+    housingType: "Propriétés d'exception sur les coteaux, résidences bourgeoises avec vue panoramique et villas privées",
+    neighborhoodQuartiers: ["Montretout", "Val d'Or", "Pasteur - Magenta", "Centre / Village", "Coteaux", "Parc de Saint-Cloud"],
+    landmarks: "Domaine national de Saint-Cloud, Hippodrome, Passerelle de l'Avre, Église Saint-Clodoald",
+    metroAccess: "Ligne 10 (Boulogne Pont de Saint-Cloud), Transilien L et U (Gare de Saint-Cloud), Tramway T2 (Parc de Saint-Cloud)",
+    localArchitecture:
+      "Dénivelés prononcés le long de la colline clodoaldienne avec des propriétés de caractère aux pièces en enfilade, parquets massifs en chêne sur lambourdes et terrasses d'agrément nécessitant des étanchéités soignées pour les pièces de vie.",
+    accessLogistics:
+      "Rues pentues et passages privés dans le quartier Montretout. Utilisation de camionnettes maniables et respect strict des horaires de tranquillité pour le stationnement et l'acheminement des enduits et parquets.",
+    directAnswer:
+      "À Saint-Cloud (92210), RenovaXpert réalise la rénovation complète de vos appartements et demeures de caractère avec exigence. Restauration de parquets anciens, peintures veloutées sans COV, carrelage et cloisons phoniques Placostil®. Notre équipe se déplace sous 24 à 48 heures ouvrées pour une étude technique sur place. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/boulogne-billancourt.webp",
+    localFaqs: [
+      {
+        question: "Comment gérer les irrégularités de plancher dans les maisons de Saint-Cloud ?",
+        answer:
+          "Sur les structures anciennes avec légers dévers, nous réalisons un ragréage fibré allégé ou un calage précis des lambourdes avant la pose de parquet contrecollé ou massif pour garantir une planéité absolue.",
+      },
+      {
+        question: "Quelles peintures préconisez-vous pour les pièces baignées de lumière à flanc de coteau ?",
+        answer:
+          "Nous appliquons des peintures veloutées ou mates profondes à haut pouvoir couvrant, insensibles à la lumière rasante et formulées sans composés organiques volatils (COV A+).",
+      },
+      {
+        question: "Sous quel délai notre demande à Saint-Cloud est-elle prise en charge ?",
+        answer:
+          "Notre équipe vous contacte sous 24 heures ouvrées pour convenir d'une visite technique gratuite et évaluer précisément les volumes et matériaux nécessaires.",
+      },
+    ],
+    neighboringSlugs: ["boulogne-billancourt", "sevres", "garches", "rueil-malmaison"],
+  },
+  {
+    slug: "sevres",
+    name: "Sèvres",
+    postalCodes: "92310",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "23 000 hab.",
+    housingType: "Pavillons meulières sur les hauteurs, immeubles collectifs des années 1960 et résidences verdoyantes",
+    neighborhoodQuartiers: ["Bruyères", "Damiers", "Centre-Ville", "Croix-Bosset", "Rive Gauche", "Brimborion"],
+    landmarks: "Manufacture nationale de Sèvres, Maison des Jardies, Parc de Brimborion, Musée national de Céramique",
+    metroAccess: "Ligne 9 (Pont de Sèvres), Tramway T2 (Musée de Sèvres, Brimborion), Transilien N et L (Gares de Sèvres-Rive-Gauche et Rive-Droite)",
+    localArchitecture:
+      "Contraste entre le bâti ancien en meulière le long de la vallée de la Seine et les résidences des années 1960-1970 avec dalles béton exigeant une atténuation acoustique certifiée de 19 à 21 dB pour la pose de revêtements de sol.",
+    accessLogistics:
+      "Rues résidentielles en pente vers les Bruyères. Approvisionnement programmé le matin et bâchage minutieux des halls de copropriété pour préserver les parties communes.",
+    directAnswer:
+      "À Sèvres (92310), RenovaXpert prend en charge tous vos travaux de rénovation intérieure : peinture soignée, parquets, sols vinyles et carrelage avec sous-couches acoustiques 21 dB conformes aux copropriétés sévriennes. Prise en charge rapide pour visite technique sur place sous 24 à 48 heures ouvrées. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/boulogne-billancourt.webp",
+    localFaqs: [
+      {
+        question: "Quelle sous-couche phonique installer pour un sol à Sèvres ?",
+        answer:
+          "Dans les résidences sur dalle béton, nous mettons en œuvre des sous-couches acoustiques résilientes certifiées 19 à 21 dB aux bruits de choc, avec PV de conformité fourni pour votre syndic.",
+      },
+      {
+        question: "Comment moderniser un appartement des années 1970 à Sèvres ?",
+        answer:
+          "Nous optimisons l'espace par l'ouverture de cloisons non porteuses, la pose de verrières d'atelier, le ragréage des sols et l'application d'enduits lissés pour éliminer les anciennes finitions crépies.",
+      },
+      {
+        question: "Intervenez-vous pour des rénovations partielles (peinture ou sol uniquement) ?",
+        answer:
+          "Oui, nos artisans interviennent aussi bien pour un rafraîchissement ciblé d'une pièce que pour une rénovation complète de votre logement sévrien.",
+      },
+    ],
+    neighboringSlugs: ["saint-cloud", "boulogne-billancourt", "meudon", "chaville"],
+  },
+  {
+    slug: "meudon",
+    name: "Meudon",
+    postalCodes: "92190",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "46 000 hab.",
+    housingType: "Propriétés cossues de Meudon-Bellevue, hôtels particuliers et grands ensembles sur dalle de Meudon-la-Forêt",
+    neighborhoodQuartiers: ["Bellevue", "Val Fleury", "Meudon-sur-Seine", "Meudon-la-Forêt", "Bas-Meudon", "Observatoire"],
+    landmarks: "Observatoire de Meudon, Musée Rodin (Villa des Brillants), Hangar Y, Forêt Domaniale de Meudon",
+    metroAccess: "RER C (Gare de Meudon-Val-Fleury), Transilien N (Gare de Meudon, Bellevue), Tramway T2 (Meudon-sur-Seine), Tramway T6 (Meudon-la-Forêt)",
+    localArchitecture:
+      "Dualité structurelle majeure entre les villas et appartements bourgeois de Bellevue aux hauteurs sous plafond généreuses avec parquets en chêne massif, et les ensembles architecturaux de Meudon-la-Forêt conçus par Pouillon sur dalles béton imposant des normes d'isolation acoustique strictes.",
+    accessLogistics:
+      "Accès aisé par les grands boulevards à Meudon-la-Forêt avec monte-matériaux possible, et voies étroites arborées vers l'Observatoire exigeant des véhicules compacts et une manutention protégée.",
+    directAnswer:
+      "Pour vos projets à Meudon (92190), RenovaXpert assure des travaux de rénovation soignés : ponçage et vitrification de parquets, isolation phonique sous dalles béton, peintures dépolluantes et carrelage moderne. Déplacement de nos artisans sous 24 à 48 heures ouvrées pour diagnostic technique. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/boulogne-billancourt.webp",
+    localFaqs: [
+      {
+        question: "Quelles normes respecter pour rénover un appartement à Meudon-la-Forêt ?",
+        answer:
+          "Dans les résidences Pouillon sur dalle béton, le maintien des performances acoustiques d'origine est obligatoire. Nous appliquons des sous-couches résilientes certifiées 21 dB avant toute pose de parquet ou sol vinyle.",
+      },
+      {
+        question: "Restaurez-vous les parquets anciens en chêne à Bellevue ?",
+        answer:
+          "Oui, nous réalisons le diagnostic des lames, le chevillage ou remplacement des parties usées, un ponçage fin sans poussière et une vitrification mate ou cirée haute résistance.",
+      },
+      {
+        question: "Comment organiser le déchargement des matériaux à Meudon ?",
+        answer:
+          "Nos équipes planifient les livraisons aux créneaux autorisés par la copropriété, protègent intégralement les sols d'ascenseurs et évacuent systématiquement les gravats en filière agréée.",
+      },
+    ],
+    neighboringSlugs: ["sevres", "boulogne-billancourt", "issy-les-moulineaux", "clamart"],
+  },
+  {
+    slug: "clamart",
+    name: "Clamart",
+    postalCodes: "92140",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "53 000 hab.",
+    housingType: "Centre ancien pittoresque, pavillons meulières, écoquartier contemporain du Panorama et résidences familiales",
+    neighborhoodQuartiers: ["Le Panorama", "Centre-Ville", "Jardin Parisien", "Percy-Schneider", "Galvents-Corby", "Plaine"],
+    landmarks: "Maison d'Artiste Jean Arp, Hôpital d'instruction des armées Percy, Lac du Panorama, Forêt de Clamart",
+    metroAccess: "Tramway T6 (Division Leclerc, Soleil Levant, Mail de la Plaine), Transilien N (Gare de Clamart), Tramway T10 (Jardin Parisien)",
+    localArchitecture:
+      "Mixité urbaine combinant l'authenticité des bâtis en pierre et brique du centre ancien avec les exigences environnementales et d'étanchéité des logements BBC contemporains du quartier du Panorama.",
+    accessLogistics:
+      "Rues pavées du centre historique avec stationnement délimité et parkings en sous-sol dans le secteur Panorama. Manutention organisée par chariots capitonnés et protections de paliers.",
+    directAnswer:
+      "À Clamart (92140), RenovaXpert transforme vos intérieurs avec méthode : redistribution de cloisons phoniques, peintures lessivables velours, parquets contrecollés et réfection de sols carrelés. Nos artisans interviennent sous 24 à 48 heures ouvrées pour visiter votre logement. Réponse sous 24h ouvrées et devis gratuit sur place.",
+    heroImage: "/images/zones/levallois-perret.webp",
+    localFaqs: [
+      {
+        question: "Travaillez-vous dans les appartements récents de l'écoquartier du Panorama ?",
+        answer:
+          "Oui, nous adaptons les aménagements intérieurs (peintures décoratives, création de dressings, verrières d'atelier, réfection de sols) en respectant les normes thermiques et phoniques du bâtiment.",
+      },
+      {
+        question: "Comment réagencer les pièces dans une maison ancienne à Clamart ?",
+        answer:
+          "Nous étudions la faisabilité des déposes de cloisons distributives, créons des ouvertures soignées et redistribuons les volumes avec des cloisons légères Placostil® à haute performance phonique.",
+      },
+      {
+        question: "Combien de temps prend un devis de rénovation à Clamart ?",
+        answer:
+          "Dès réception de votre demande, notre équipe convient d'un rendez-vous sur place sous 24 heures ouvrées pour métrer votre chantier et vous transmettre un devis détaillé sans frais.",
+      },
+    ],
+    neighboringSlugs: ["meudon", "issy-les-moulineaux", "chatillon", "fontenay-aux-roses"],
+  },
+  {
+    slug: "colombes",
+    name: "Colombes",
+    postalCodes: "92700",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "88 000 hab.",
+    housingType: "Plus grand tissu pavillonnaire de petite couronne, quartiers d'échoppes, immeubles briques 1930 et résidences modernes",
+    neighborhoodQuartiers: ["La Petite Garenne", "Centre-Ville", "Fossés-Jean", "Agent Sarre", "Stade", "Wiener"],
+    landmarks: "Stade Yves-du-Manoir, Coulée Verte de Colombes, Musée municipal d'Art et d'Histoire, Église Saint-Pierre-Saint-Paul",
+    metroAccess: "Transilien J (Gares de Colombes, Le Stade, Les Vallées), Transilien L (Les Vallées), Tramway T2 (Victor Basch, Jacqueline Auriol)",
+    localArchitecture:
+      "Patrimoine pavillonnaire remarquable dans la Petite Garenne avec planchers bois sur caves et charpentes apparentes, complété par des immeubles collectifs des années 1930 en briques nécessitant des reprises d'enduits fins et un traitement anti-fissures par calicot.",
+    accessLogistics:
+      "Rues pavillonnaires calmes facilitant le stationnement des camionnettes d'artisans. Tri et évacuation ordonnée des déchets de démolition vers les centres de traitement du 92.",
+    directAnswer:
+      "À Colombes (92700), RenovaXpert assure la rénovation de vos maisons et appartements : rénovation de parquets sur lambourdes, doublage placo isolant, carrelage et peintures dépolluantes soignées. Déplacement sous 24 à 48 heures ouvrées par notre propre équipe d'artisans pour métré précis. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/levallois-perret.webp",
+    localFaqs: [
+      {
+        question: "Comment rénover un plancher en bois ancien dans une maison de Colombes ?",
+        answer:
+          "Nous vérifions l'état des solives en sous-sol, remplaçons les lambourdes fatiguées, posons un isolant thermique et phonique entre solives, puis installons un parquet neuf massif ou contrecollé.",
+      },
+      {
+        question: "Quelle solution privilégier pour isoler phoniquement un appartement des années 1930 ?",
+        answer:
+          "Nous mettons en place des contre-cloisons sur ossature métallique désolidarisée avec laine minérale acoustique et plaques phoniques à haute densité, réduisant significativement les bruits de mitoyenneté.",
+      },
+      {
+        question: "Réalisez-vous le ragréage sur du carrelage existant à Colombes ?",
+        answer:
+          "Oui, après ponçage d'accroche et application d'un primaire spécial carrelage, nous coulons un ragréage autolissant fibré pour poser directement un nouveau parquet ou sol vinyle sans démolition lourde.",
+      },
+    ],
+    neighboringSlugs: ["asnieres-sur-seine", "bois-colombes", "la-garenne-colombes", "nanterre"],
+  },
+  {
+    slug: "nanterre",
+    name: "Nanterre",
+    postalCodes: "92000",
+    department: "Hauts-de-Seine",
+    departmentCode: "92",
+    population: "96 000 hab.",
+    housingType: "Tours emblématiques d'Aillaud, résidences contemporaines des Terrasses de l'Arche, pavillons du Mont-Valérien et centre historique",
+    neighborhoodQuartiers: ["Terrasses de l'Arche", "Mont-Valérien", "Centre Ancien", "Chemins de l'Île", "Parc Sud", "Plateau"],
+    landmarks: "Paris La Défense Arena, Parc André-Malraux, Théâtre des Amandiers, Cathédrale Sainte-Geneviève",
+    metroAccess: "RER A (Nanterre-Préfecture, Nanterre-Université, Nanterre-Ville), Transilien L (Nanterre-Université), RER E (Nanterre-la-Folie)",
+    localArchitecture:
+      "Immense variété typologique : appartements récents aux Terrasses avec dalles béton lisses et grandes baies vitrées, immeubles des années 1970 nécessitant une isolation acoustique 19-21 dB renforcée, et maisons familiales traditionnelles au Mont-Valérien.",
+    accessLogistics:
+      "Accès pratique pour monte-meubles sur les grandes esplanades et voies larges de Préfecture. Coordination avec les gardiens d'immeubles pour le respect des heures de travaux.",
+    directAnswer:
+      "À Nanterre (92000), RenovaXpert prend en charge vos travaux de second œuvre : pose de sols vinyles LVT, vitrification de parquet, cloisons placo et peintures soignées pour appartements et pavillons. Visite technique organisée sous 24 à 48 heures ouvrées. Réponse sous 24h ouvrées et devis gratuit sans engagement.",
+    heroImage: "/images/zones/boulogne-billancourt.webp",
+    localFaqs: [
+      {
+        question: "Comment rénover rapidement un appartement locatif près de La Défense ?",
+        answer:
+          "Nous préconisons la pose de sols vinyles rigides clipsables ultra-résistants et la réfection des peintures en blanc velouté lessivable pour un chantier express et un logement impeccable.",
+      },
+      {
+        question: "Quelles garanties pour des travaux dans une grande copropriété à Nanterre ?",
+        answer:
+          "Nous respectons scrupuleusement le cahier des charges du syndic, protégeons les parties communes et fournissons les fiches techniques certifiées de nos matériaux et sous-couches isolantes.",
+      },
+      {
+        question: "Prenez-vous en charge la dépose et l'évacuation des anciens revêtements ?",
+        answer:
+          "Oui, dépose de moquette, carrelage ou vieux parquet, tri méthodique et enlèvement vers les filières de recyclage professionnelles agréées du secteur.",
+      },
+    ],
+    neighboringSlugs: ["puteaux", "courbevoie", "rueil-malmaison", "colombes"],
+  },
+  {
+    slug: "pantin",
+    name: "Pantin",
+    postalCodes: "93500",
+    department: "Seine-Saint-Denis",
+    departmentCode: "93",
+    population: "60 000 hab.",
+    housingType: "Lofts d'ateliers réhabilités le long du canal, immeubles faubouriens début XXe et résidences contemporaines",
+    neighborhoodQuartiers: ["Canal de l'Ourcq", "Quatre-Chemins", "Église de Pantin", "Mairie - Ourcq", "Hoche", "Courtillières"],
+    landmarks: "Centre National de la Danse, Grands Moulins de Pantin, Canal de l'Ourcq, Parc Henri-Barbusse",
+    metroAccess: "Ligne 5 (Hoche, Église de Pantin, Bobigny - Pantin - Raymond Queneau), Ligne 7 (Aubervilliers - Pantin - Quatre Chemins), RER E (Gare de Pantin)",
+    localArchitecture:
+      "Pôle créatif majeur du Grand Paris : rénovation de volumes d'anciens ateliers de confection et d'artisanat avec verrières sur mesure, maçonneries apparentes, cloisons phoniques Placostil® et parquets contrecollés grande largeur ou sols vinyles industriels chaleureux.",
+    accessLogistics:
+      "Rues vivantes et passages d'ateliers avec accès sécurisés. Gestion millimétrée des livraisons de matériaux et utilisation de chariots capitonnés pour ne pas dégrader les parties communes.",
+    directAnswer:
+      "À Pantin (93500), RenovaXpert aménage vos lofts et appartements avec style et précision : verrières sur mesure, peintures dépolluantes, pose de parquet, sols vinyles étanches et cloisons phoniques. Intervention sous 24 à 48 heures ouvrées pour analyse technique de vos espaces. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/vincennes.webp",
+    localFaqs: [
+      {
+        question: "Comment agencer un loft avec de grandes hauteurs sous plafond à Pantin ?",
+        answer:
+          "Nous créons des cloisons distributives phoniques, posons des faux plafonds suspendus avec spots intégrés et installons des verrières d'atelier pour sculpter la lumière sans cloisonner.",
+      },
+      {
+        question: "Quel sol choisir pour un ancien atelier rénové au bord du canal ?",
+        answer:
+          "Le parquet contrecollé brossé mat ou les lames vinyles rigides aspect béton ciré / chêne brut allient authenticité esthétique, isolation acoustique et facilité d'entretien.",
+      },
+      {
+        question: "Comment organiser une visite technique pour un devis à Pantin ?",
+        answer:
+          "Contactez-nous par téléphone ou formulaire : nos artisans conviennent d'un créneau sous 24h ouvrées pour analyser votre espace et préparer un chiffrage détaillé gratuit.",
+      },
+    ],
+    neighboringSlugs: ["montreuil", "paris-19", "aubervilliers", "le-pre-saint-gervais"],
+  },
+  {
+    slug: "fontenay-sous-bois",
+    name: "Fontenay-sous-Bois",
+    postalCodes: "94120",
+    department: "Val-de-Marne",
+    departmentCode: "94",
+    population: "53 000 hab.",
+    housingType: "Maisons meulières de charme, appartements bourgeois du Village, résidences verdoyantes proches du bois de Vincennes",
+    neighborhoodQuartiers: ["Le Village", "Les Rigollots", "Val de Fontenay", "Parreau", "Plateau", "Bois de Vincennes"],
+    landmarks: "Bois de Vincennes, Place du Général de Gaulle, Église Saint-Germain, Maison du Citoyen",
+    metroAccess: "RER A (Gare de Fontenay-sous-Bois, Val de Fontenay), RER E (Val de Fontenay), Ligne 1 (Château de Vincennes à proximité)",
+    localArchitecture:
+      "Cadre résidentiel préservé à l'orée du bois de Vincennes : appartements anciens aux parquets massifs en point de Hongrie, meulières familiales aux pièces d'eau à moderniser, et immeubles récents exigeant des sous-couches d'affaiblissement acoustique 21 dB certifiées.",
+    accessLogistics:
+      "Secteurs calmes et arborés facilitant le stationnement près du Village et des Rigollots. Protection soigneuse des cages d'escalier et dépose propre des anciens revêtements.",
+    directAnswer:
+      "À Fontenay-sous-Bois (94120), RenovaXpert met son savoir-faire au service de vos intérieurs : rénovation de parquets massifs, carrelage, cloisons en placo et peintures soignées près du bois de Vincennes. Rendez-vous sur place sous 24 à 48 heures ouvrées pour métré. Réponse sous 24h ouvrées et devis gratuit.",
+    heroImage: "/images/zones/vincennes.webp",
+    localFaqs: [
+      {
+        question: "Comment restaurer un parquet ancien dans un appartement du Village à Fontenay ?",
+        answer:
+          "Nous effectuons le diagnostic des lames en chêne, le ponçage mécanique sans poussière en trois passes et l'application d'un vitrificateur écologique mat ou satiné sans odeur.",
+      },
+      {
+        question: "Faites-vous la rénovation de carrelage dans les maisons meulières ?",
+        answer:
+          "Oui, nous réalisons la dépose de l'ancien carrelage, le ragréage étanche et la pose de faïences ou carrelages grand format avec joints hydrofuges fins pour cuisines et salles de bain.",
+      },
+      {
+        question: "Quel délai pour une visite technique et un devis à Fontenay-sous-Bois ?",
+        answer:
+          "Notre équipe vous répond sous 24 heures ouvrées et planifie une visite gratuite chez vous pour prendre les cotes et définir vos finitions idéales.",
+      },
+    ],
+    neighboringSlugs: ["vincennes", "nogent-sur-marne", "montreuil", "saint-mande"],
+  },
 ];
 
 export function getLocationBySlug(slug: string): LocationData | undefined {
