@@ -1,11 +1,13 @@
 import type { Route } from "./+types/services";
 import { ServicesHero } from "~/blocks/services/services-hero";
+import { RenovationHighlight } from "~/blocks/services/renovation-highlight";
 import { PeintureSection } from "~/blocks/services/peinture-section";
 import { ParquetSection } from "~/blocks/services/parquet-section";
 import { CarrelageSection } from "~/blocks/services/carrelage-section";
 import { SolVinyleSection } from "~/blocks/services/sol-vinyle-section";
 import { DrywallSection } from "~/blocks/services/drywall-section";
 import { NettoyageSection } from "~/blocks/services/nettoyage-section";
+import { ServicesMethodologyFaq } from "~/blocks/services/services-methodology-faq";
 import { buildMeta } from "~/lib/seo";
 import styles from "./services.module.css";
 
@@ -54,12 +56,14 @@ export default function Services() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
       <ServicesHero />
+      <RenovationHighlight />
       <PeintureSection />
       <ParquetSection />
       <CarrelageSection />
       <SolVinyleSection />
       <DrywallSection />
       <NettoyageSection />
+      <ServicesMethodologyFaq />
     </main>
   );
 }

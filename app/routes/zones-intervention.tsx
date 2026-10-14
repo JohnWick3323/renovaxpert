@@ -1,7 +1,8 @@
 import { Link } from "react-router";
-import { ChevronRight, Phone, ArrowRight, MapPin, CheckCircle2, ShieldCheck, Clock, Building2, Paintbrush, Layers, Grid3x3, Leaf, Square, Sparkles } from "lucide-react";
+import { ChevronRight, Phone, ArrowRight, MapPin, CheckCircle2, ShieldCheck, Clock, Building2, Paintbrush, Layers, Grid3x3, Leaf, Square, Sparkles, Home } from "lucide-react";
 import type { Route } from "./+types/zones-intervention";
 import { siteConfig } from "~/lib/site-config";
+import { locationsData } from "~/data/locations";
 import { buildMeta } from "~/lib/seo";
 import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import { trackQuoteCtaClick, trackClickToCall } from "~/lib/analytics";
@@ -53,32 +54,9 @@ const hubSchema = {
   ],
 };
 
-const cities = [
-  {
-    name: "Boulogne-Billancourt",
-    code: "92100",
-    slug: "/renovation-interieure/boulogne-billancourt",
-    desc: "Rénovation d'appartements familiaux, résidences Art Déco et immeubles récents aux Rives de Seine. Travaux soignés de peinture, sols et plâtrerie.",
-  },
-  {
-    name: "Neuilly-sur-Seine",
-    code: "92200",
-    slug: "/renovation-interieure/neuilly-sur-seine",
-    desc: "Prestations haut de gamme pour appartements en pierre de taille, parquets anciens en point de Hongrie, moulures et finitions soignées.",
-  },
-  {
-    name: "Levallois-Perret",
-    code: "92300",
-    slug: "/renovation-interieure/levallois-perret",
-    desc: "Réagencement d'espaces urbains denses, optimisation de cloisons en placo, carrelages modernes et rénovation de sols.",
-  },
-  {
-    name: "Vincennes",
-    code: "94300",
-    slug: "/renovation-interieure/vincennes",
-    desc: "Rénovation respectueuse du charme de l'ancien aux abords du Bois : parquets massifs, peintures douces et remise en état après travaux.",
-  },
-];
+const dept92 = locationsData.filter((l) => l.departmentCode === "92");
+const dept94 = locationsData.filter((l) => l.departmentCode === "94");
+const dept93 = locationsData.filter((l) => l.departmentCode === "93");
 
 const faqs = [
   {
@@ -163,28 +141,55 @@ export default function ZonesInterventionHub() {
         </div>
       </section>
 
-      {/* Villes prioritaires de proche couronne */}
+      {/* Villes de proche couronne Hauts-de-Seine (92) */}
       <section className={styles.section}>
         <div className={styles.inner}>
           <div className={styles.sectionHeader}>
-            <h2>Communes de Proche Couronne Couvertes</h2>
+            <h2>Hauts-de-Seine (92) — 16 Pôles Municipaux Couverts</h2>
             <p>
-              Nos équipes se déplacent quotidiennement dans les départements des Hauts-de-Seine (92) et du Val-de-Marne (94)
-              pour réaliser vos projets de rénovation avec exigence et méthode.
+              Nos équipes d'artisans interviennent quotidiennement dans l'ouest parisien pour la rénovation d'appartements de standing, résidences Art Déco et habitat contemporain.
             </p>
           </div>
 
           <div className={styles.grid4}>
-            {cities.map((c) => (
+            {dept92.map((c) => (
               <div key={c.slug} className={styles.card}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-primary)" }}>
                   <Building2 size={24} aria-hidden="true" />
-                  <span style={{ fontSize: "var(--text-xs)", fontWeight: 700, color: "var(--color-accent)" }}>{c.code}</span>
+                  <span style={{ fontSize: "var(--text-xs)", fontWeight: 700, color: "var(--color-accent)" }}>{c.postalCodes}</span>
                 </div>
                 <h3>{c.name}</h3>
-                <p>{c.desc}</p>
-                <Link to={c.slug} className={styles.cardLink}>
-                  Découvrir les prestations à {c.name} <ArrowRight size={14} aria-hidden="true" />
+                <p>{c.housingType}</p>
+                <Link to={`/renovation-interieure/${c.slug}`} className={styles.cardLink}>
+                  Prestations à {c.name} <ArrowRight size={14} aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Val-de-Marne (94) & Seine-Saint-Denis (93) */}
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <div className={styles.inner}>
+          <div className={styles.sectionHeader}>
+            <h2>Val-de-Marne (94) &amp; Seine-Saint-Denis (93)</h2>
+            <p>
+              Rénovations soignées le long de la Marne, aux abords du bois de Vincennes, et réhabilitation d'anciens ateliers en lofts d'artistes.
+            </p>
+          </div>
+
+          <div className={styles.grid4}>
+            {[...dept94, ...dept93].map((c) => (
+              <div key={c.slug} className={styles.card} style={{ backgroundColor: "#ffffff" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "var(--color-primary)" }}>
+                  <Building2 size={24} aria-hidden="true" />
+                  <span style={{ fontSize: "var(--text-xs)", fontWeight: 700, color: "var(--color-accent)" }}>{c.postalCodes}</span>
+                </div>
+                <h3>{c.name}</h3>
+                <p>{c.housingType}</p>
+                <Link to={`/renovation-interieure/${c.slug}`} className={styles.cardLink}>
+                  Prestations à {c.name} <ArrowRight size={14} aria-hidden="true" />
                 </Link>
               </div>
             ))}
@@ -227,11 +232,19 @@ export default function ZonesInterventionHub() {
 
           {/* Six services overview grid */}
           <div className={styles.sectionHeader} style={{ margin: "var(--space-12) auto var(--space-8)" }}>
-            <h2>Nos Six Prestations de Rénovation Intérieure</h2>
+            <h2>Nos Prestations de Rénovation Intérieure</h2>
             <p>Toutes nos prestations sont réalisées par notre propre équipe d'artisans sans sous-traitance imprévue.</p>
           </div>
 
           <div className={styles.grid3}>
+            <div className={styles.card}>
+              <Home size={24} style={{ color: "var(--color-primary)" }} aria-hidden="true" />
+              <h3>Rénovation d'Appartement</h3>
+              <p>Rénovation complète tous corps d'état, coordination globale et finitions haut de gamme.</p>
+              <Link to="/services/renovation-appartement-paris" className={styles.cardLink}>
+                En savoir plus <ArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </div>
             <div className={styles.card}>
               <Paintbrush size={24} style={{ color: "var(--color-primary)" }} aria-hidden="true" />
               <h3>Peinture Intérieure</h3>
@@ -305,6 +318,48 @@ export default function ZonesInterventionHub() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Périmètre d'intervention RenovaXpert Paris et Proche Couronne"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Section guide méthodologique et logistique locale */}
+      <section className={styles.section}>
+        <div className={styles.inner}>
+          <div className={styles.sectionHeader}>
+            <h2>L'Excellence Opérationnelle dans l'Agglomération Parisienne</h2>
+            <p>
+              Rénover un appartement dans le Grand Paris nécessite d'anticiper les particularités techniques et réglementaires de chaque zone géographique.
+            </p>
+          </div>
+
+          <div className={styles.grid3}>
+            <div className={styles.card}>
+              <div style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}>
+                <Building2 size={24} aria-hidden="true" />
+              </div>
+              <h3>Maîtrise du Bâti Ancien &amp; Contemporain</h3>
+              <p>
+                Des appartements de prestige en pierre de taille à Neuilly et Paris 16e jusqu'aux résidences modernes du Trapèze à Boulogne et du Panorama à Clamart, nos artisans adaptent leurs matériaux (peintures écologiques sans COV, ragréages fibrés et sous-couches 21 dB).
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}>
+                <ShieldCheck size={24} aria-hidden="true" />
+              </div>
+              <h3>Respect Rigoureux des Copropriétés</h3>
+              <p>
+                Affichage préalable dans les halls d'immeubles, protection capitonnée des ascenseurs et des moquettes de paliers, respect scrupuleux des créneaux horaires autorisés pour les travaux bruyants et gestion méthodique de l'isolation phonique aux bruits d'impact.
+              </p>
+            </div>
+            <div className={styles.card}>
+              <div style={{ color: "var(--color-primary)", marginBottom: "0.5rem" }}>
+                <Clock size={24} aria-hidden="true" />
+              </div>
+              <h3>SLA Réactif &amp; Visite Technique Gratuite</h3>
+              <p>
+                Prise de contact garantie sous 24 heures ouvrées pour convenir d'un rendez-vous sur place. Nos artisans se déplacent sans frais dans les 24 communes d'intervention pour prendre les cotes, examiner l'état des supports et établir votre devis détaillé sans engagement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
