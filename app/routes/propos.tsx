@@ -4,21 +4,64 @@ import { CompanyStory } from "~/blocks/propos/company-story";
 import { OurValues } from "~/blocks/propos/our-values";
 import { TeamStandards } from "~/blocks/propos/team-standards";
 import { CertificationsExperience } from "~/blocks/propos/certifications-experience";
+import { siteConfig } from "~/lib/site-config";
 import { buildMeta } from "~/lib/seo";
 import styles from "./propos.module.css";
 
+const canonicalPath = "/a-propos";
+const pageTitle = "À Propos de RenovaXpert - Entreprise de Rénovation à Paris";
+const pageDescription =
+  "Découvrez l'équipe, la méthode de travail et les engagements de RenovaXpert pour vos travaux de rénovation intérieure à Paris et proche couronne.";
+
 export function meta({}: Route.MetaArgs) {
   return buildMeta({
-    title: "À Propos de RenovaXpert - Entreprise de Rénovation à Paris",
-    description:
-      "Découvrez l'équipe, la méthode de travail et les engagements de RenovaXpert pour vos travaux de rénovation intérieure à Paris et proche couronne.",
-    pathname: "/a-propos",
+    title: pageTitle,
+    description: pageDescription,
+    pathname: canonicalPath,
   });
 }
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `https://renovaxpert.fr${canonicalPath}#webpage`,
+      "url": `https://renovaxpert.fr${canonicalPath}`,
+      "name": pageTitle,
+      "description": pageDescription,
+      "mainEntity": {
+        "@id": siteConfig.entityId,
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "@id": `https://renovaxpert.fr${canonicalPath}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://renovaxpert.fr/",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "À Propos",
+            "item": `https://renovaxpert.fr${canonicalPath}`,
+          },
+        ],
+      },
+    },
+  ],
+};
 
 export default function Propos() {
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <AboutHero />
       <CompanyStory />
       <OurValues />

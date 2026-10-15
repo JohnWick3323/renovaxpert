@@ -7,9 +7,9 @@ import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import styles from "./service-page.module.css";
 
 const canonicalPath = "/services/renovation-appartement-paris";
-const pageTitle = "Rénovation d'Appartement à Paris : Entreprise Tous Corps d'État | RenovaXpert";
+const pageTitle = "Rénovation d'Appartement à Paris | RenovaXpert";
 const pageDescription =
-  "Entreprise de rénovation d'appartement à Paris et proche couronne : travaux tous corps d'état, coordination et finitions soignées. Réponse sous 24h ouvrées et devis gratuit.";
+  "Rénovation d'appartement à Paris et proche couronne : travaux tous corps d'état et finitions soignées. Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({

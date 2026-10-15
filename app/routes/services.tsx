@@ -14,7 +14,7 @@ import styles from "./services.module.css";
 const canonicalPath = "/services";
 const pageTitle = "Services de Rénovation Intérieure à Paris | RenovaXpert";
 const pageDescription =
-  "Découvrez nos prestations de rénovation intérieure à Paris et proche couronne : peinture, parquet, carrelage, sol vinyle, placo et nettoyage. Devis gratuit et réponse sous 24h ouvrées.";
+  "Services de rénovation intérieure à Paris et proche couronne : peinture, parquet, carrelage, placo et sol vinyle. Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({

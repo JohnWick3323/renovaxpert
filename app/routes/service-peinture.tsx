@@ -9,7 +9,7 @@ import styles from "./service-page.module.css";
 const canonicalPath = "/services/peinture-interieure-paris";
 const pageTitle = "Peinture Intérieure à Paris - Entreprise de Peinture | RenovaXpert";
 const pageDescription =
-  "Travaux de peinture intérieure à Paris et proche couronne par notre propre équipe d'artisans. Préparation soignée des murs et plafonds, peintures de qualité et devis gratuit.";
+  "Artisans peintres à Paris et proche couronne : préparation soignée des murs, enduits et peintures A+. Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({

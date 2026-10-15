@@ -3,21 +3,64 @@ import { ContactHero } from "~/blocks/contact/contact-hero";
 import { QuoteRequestForm } from "~/blocks/contact/quote-request-form";
 import { ContactInformation } from "~/blocks/contact/contact-information";
 import { LocationMap } from "~/blocks/contact/location-map";
+import { siteConfig } from "~/lib/site-config";
 import { buildMeta } from "~/lib/seo";
 import styles from "./contact.module.css";
 
+const canonicalPath = "/contact";
+const pageTitle = "Contact & Devis Gratuit - RenovaXpert Rénovation Paris";
+const pageDescription =
+  "Demandez votre devis gratuit de rénovation intérieure à Paris et proche couronne. Notre équipe répond à votre demande sous 24 heures ouvrées.";
+
 export function meta({}: Route.MetaArgs) {
   return buildMeta({
-    title: "Contact & Devis Gratuit - RenovaXpert Rénovation Paris",
-    description:
-      "Demandez votre devis gratuit de rénovation intérieure à Paris et proche couronne. Notre équipe répond à votre demande sous 24 heures ouvrées.",
-    pathname: "/contact",
+    title: pageTitle,
+    description: pageDescription,
+    pathname: canonicalPath,
   });
 }
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": `https://renovaxpert.fr${canonicalPath}#webpage`,
+      "url": `https://renovaxpert.fr${canonicalPath}`,
+      "name": pageTitle,
+      "description": pageDescription,
+      "mainEntity": {
+        "@id": siteConfig.entityId,
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "@id": `https://renovaxpert.fr${canonicalPath}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://renovaxpert.fr/",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": `https://renovaxpert.fr${canonicalPath}`,
+          },
+        ],
+      },
+    },
+  ],
+};
 
 export default function Contact() {
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+      />
       <ContactHero />
       <QuoteRequestForm />
       <ContactInformation />

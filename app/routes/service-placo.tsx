@@ -7,9 +7,9 @@ import { GhlQuoteForm } from "~/components/ghl-quote-form";
 import styles from "./service-page.module.css";
 
 const canonicalPath = "/services/pose-plaques-de-platre-paris";
-const pageTitle = "Plaquiste à Paris : Pose de Placo, Cloisons & Plafonds | RenovaXpert";
+const pageTitle = "Artisan Plaquiste & Pose de Placo à Paris | RenovaXpert";
 const pageDescription =
-  "Artisans plaquistes à Paris et proche couronne pour la pose de plaques de plâtre, cloisons amovibles, faux plafonds et doublages isolants. Devis gratuit et réponse sous 24h ouvrées.";
+  "Artisans plaquistes à Paris et proche couronne : cloisons phoniques, faux plafonds et doublages isolants. Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({

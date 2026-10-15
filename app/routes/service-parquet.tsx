@@ -9,7 +9,7 @@ import styles from "./service-page.module.css";
 const canonicalPath = "/services/pose-parquet-paris";
 const pageTitle = "Entreprise de Parquet & Poseur Parquet à Paris | RenovaXpert";
 const pageDescription =
-  "Entreprise de parquet à Paris : pose, ponçage sans poussière et rénovation de parquets anciens (point de Hongrie, massif, contrecollé). Réponse sous 24h ouvrées et devis gratuit.";
+  "Entreprise de parquet à Paris : pose, ponçage sans poussière et rénovation de parquets anciens (point de Hongrie). Réponse sous 24h ouvrées et devis gratuit.";
 
 export function meta({}: Route.MetaArgs) {
   return buildMeta({
