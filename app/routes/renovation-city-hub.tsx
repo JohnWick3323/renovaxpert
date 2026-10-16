@@ -104,6 +104,7 @@ export default function RenovationCityHub() {
             "@type": "AdministrativeArea",
             name: location.department,
           },
+          sameAs: `https://fr.wikipedia.org/wiki/${encodeURIComponent(location.name.replace(/ /g, "_"))}`,
         },
         hasMap: mapPublicUrl,
       },
@@ -320,7 +321,18 @@ export default function RenovationCityHub() {
               <ul className={styles.checkList} style={{ marginTop: "1rem" }}>
                 <li>
                   <CheckCircle2 size={16} aria-hidden="true" />
-                  <span>Respect strict des horaires de travaux bruyants autorisés</span>
+                  <span>
+                    Respect strict des horaires de travaux bruyants autorisés (selon la{" "}
+                    <a
+                      href="https://www.service-public.fr/particuliers/vosdroits/F612"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#1e3a8a", textDecoration: "underline" }}
+                    >
+                      réglementation sur les bruits de voisinage
+                    </a>
+                    )
+                  </span>
                 </li>
                 <li>
                   <CheckCircle2 size={16} aria-hidden="true" />
@@ -328,7 +340,32 @@ export default function RenovationCityHub() {
                 </li>
                 <li>
                   <CheckCircle2 size={16} aria-hidden="true" />
-                  <span>Évacuation des gravats en sacs étanches vers filières agréées</span>
+                  <span>
+                    Isolation acoustique et sous-couches 19 à 21 dB conformes aux{" "}
+                    <a
+                      href="https://evaluation.cstb.fr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#1e3a8a", textDecoration: "underline" }}
+                    >
+                      avis techniques CSTB
+                    </a>
+                  </span>
+                </li>
+                <li>
+                  <CheckCircle2 size={16} aria-hidden="true" />
+                  <span>
+                    Évacuation des gravats en sacs étanches vers les centres de tri agréés (filières de{" "}
+                    <a
+                      href="https://www.syctom-paris.fr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#1e3a8a", textDecoration: "underline" }}
+                    >
+                      valorisation Syctom
+                    </a>
+                    )
+                  </span>
                 </li>
               </ul>
             </div>

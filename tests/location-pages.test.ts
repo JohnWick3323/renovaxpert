@@ -232,7 +232,7 @@ test("Check 15: Homepage enrichie avec guide méthodologique, maillage vers les 
 });
 
 test("Check 16: Identifiants GHL et noms d'événements analytics intacts", () => {
-  assert.equal(siteConfig.ghl.formId, "3CjwChGZ2ZSmy16TGijM");
+  assert.equal(siteConfig.ghl.formId, "4mxQLCZroon2I08YvhBX");
 
   const analyticsCode = fs.readFileSync(path.resolve("app/lib/analytics.ts"), "utf-8");
   assert.ok(analyticsCode.includes('"quote_cta_click"'));

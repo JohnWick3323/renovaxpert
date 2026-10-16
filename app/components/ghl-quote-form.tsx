@@ -35,6 +35,34 @@ export function GhlQuoteForm({
       script.async = true;
       document.body.appendChild(script);
     }
+
+    // Capture direct GHL survey postMessage completion
+    const handleMessage = (event: MessageEvent) => {
+      if (typeof event.data === "string") {
+        try {
+          const parsed = JSON.parse(event.data);
+          if (
+            parsed.action === "survey_submit" ||
+            parsed.action === "form_submit" ||
+            parsed.type === "form_submit" ||
+            parsed.event === "form_submission"
+          ) {
+            import("~/lib/analytics").then(({ trackGenerateLead }) => {
+              trackGenerateLead({
+                form_name: "ghl_survey",
+                page_path: window.location.pathname,
+                lead_type: "renovation_survey",
+              });
+            });
+          }
+        } catch {
+          // non-JSON message, ignore
+        }
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
   }, []);
 
   useEffect(() => {

@@ -33,10 +33,10 @@ export const siteConfig = {
   indexingEnabled: true,
 
   ghl: {
-    formUrl: "https://link.westlanddre.com/widget/form/3CjwChGZ2ZSmy16TGijM",
+    formUrl: "https://link.westlanddre.com/widget/survey/4mxQLCZroon2I08YvhBX",
     formScript: "https://link.westlanddre.com/js/form_embed.js",
-    formId: "3CjwChGZ2ZSmy16TGijM",
-    iframeTitle: "Formulaire de demande de devis RenovaXpert",
+    formId: "4mxQLCZroon2I08YvhBX",
+    iframeTitle: "Simulateur de devis de rénovation RenovaXpert",
   },
 
   servicesList: [

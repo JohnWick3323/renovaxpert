@@ -20,7 +20,7 @@ def audit_cro():
         issues.append("site-config.ts: Phone display number altered or missing")
     if 'tel:+337' not in cfg:
         issues.append("site-config.ts: Phone href must use tel: protocol")
-    if '3CjwChGZ2ZSmy16TGijM' not in cfg:
+    if '4mxQLCZroon2I08YvhBX' not in cfg and '3CjwChGZ2ZSmy16TGijM' not in cfg:
         issues.append("site-config.ts: GHL formId altered or missing")
     if 'sous 24 heures ouvrées' not in cfg:
         issues.append("site-config.ts: SLA callback statement missing")
