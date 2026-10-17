@@ -49,11 +49,11 @@ export function HeroSection({ className }: { className?: string }) {
         {/* Right: official GHL quote form */}
         <div className={styles.formCard} id="devis-form">
           <div className={styles.formHeader}>
-            <span className={styles.formTag}>Devis Gratuit</span>
-            <h2 className={styles.formTitle}>Obtenez votre devis gratuit</h2>
-            <p className={styles.formSub}>Sans engagement, réponse sous 24h ouvrées</p>
+            <span className={styles.formTag}>Simulateur en 2 min</span>
+            <h2 className={styles.formTitle}>Estimez vos travaux en ligne</h2>
+            <p className={styles.formSub}>Diagnostic gratuit, sans engagement & réponse sous 24h ouvrées</p>
           </div>
-          <GhlQuoteForm id="hero-devis" />
+          <GhlQuoteForm id="hero-devis" variant="transparent" minHeight={660} />
         </div>
       </div>
     </section>

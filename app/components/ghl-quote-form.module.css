@@ -6,9 +6,9 @@
 
 .iframeContainer {
   width: 100%;
-  min-height: 620px;
+  min-height: 680px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .iframeContainerCard {
@@ -25,7 +25,7 @@
 
 .iframe {
   width: 100%;
-  min-height: 620px;
+  min-height: 680px;
   height: 100%;
   border: none;
   border-radius: var(--radius-lg, 12px);
@@ -36,7 +36,7 @@
 @media (max-width: 640px) {
   .iframeContainer,
   .iframe {
-    min-height: 600px;
+    min-height: 660px;
   }
 }
 
