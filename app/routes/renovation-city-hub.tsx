@@ -161,12 +161,10 @@ export default function RenovationCityHub() {
               Artisans Rénovation {location.name}
             </div>
             <h1 className={styles.title}>
-              Entreprise de Rénovation Intérieure à {location.name}
+              Entreprise de Rénovation Intérieure à {location.name} ({location.postalCodes})
             </h1>
             <p className={styles.subtitle}>
-              RenovaXpert prend en charge vos travaux de second œuvre à {location.name} ({location.postalCodes}). De la peinture
-              décorative à la pose de parquet, en passant par le carrelage et les cloisons en placo, nos artisans qualifiés
-              réalisent vos aménagements avec rigueur, propreté et respect des délais.
+              Spécialiste du second œuvre à {location.name} : rénovation d'appartements {location.architectureType.toLowerCase()}, pose de parquet, peinture soignée et carrelage avec respect strict des copropriétés locales.
             </p>
             <div className={styles.heroActions}>
               <a
