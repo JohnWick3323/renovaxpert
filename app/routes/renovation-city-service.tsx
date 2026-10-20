@@ -184,7 +184,7 @@ export default function RenovationCityService() {
               {service.name} à {location.name} ({location.postalCodes})
             </h1>
             <p className={styles.subtitle}>
-              Artisans qualifiés pour vos travaux de {service.shortName.toLowerCase()} à {location.name} ({location.postalCodes}). Finitions soignées adaptées aux logements {location.architectureType.toLowerCase()}, matériaux certifiés et respect strict des règles de copropriété.
+              Artisans qualifiés pour vos travaux de {service.shortName.toLowerCase()} à {location.name} ({location.postalCodes}). Finitions soignées adaptées aux logements locaux ({location.housingType}), matériaux certifiés et respect strict des règles de copropriété.
             </p>
             <div className={styles.heroActions}>
               <a

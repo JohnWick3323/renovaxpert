@@ -164,7 +164,7 @@ export default function RenovationCityHub() {
               Entreprise de Rénovation Intérieure à {location.name} ({location.postalCodes})
             </h1>
             <p className={styles.subtitle}>
-              Spécialiste du second œuvre à {location.name} : rénovation d'appartements {location.architectureType.toLowerCase()}, pose de parquet, peinture soignée et carrelage avec respect strict des copropriétés locales.
+              Spécialiste du second œuvre à {location.name} : rénovation d'appartements et maisons ({location.housingType}), pose de parquet, peinture soignée et carrelage avec respect strict des copropriétés locales.
             </p>
             <div className={styles.heroActions}>
               <a
