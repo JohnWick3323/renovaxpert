@@ -1,0 +1,103 @@
+/* ==========================================================================
+   PERSISTENT MOBILE STICKY DUAL-ACTION BAR (< 768px)
+   Compliant with site-build-checklist.pages.dev Mobile-First Directives
+   ========================================================================== */
+
+.stickyBar {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(10, 28, 60, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
+  padding: 0.65rem 0.85rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Strictly hide on desktop / tablet >= 768px */
+@media (min-width: 768px) {
+  .stickyBar {
+    display: none !important;
+  }
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Base button ergonomics: Minimum 48px touch target */
+.callButton,
+.quoteButton {
+  min-height: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0 0.75rem;
+  transition: all 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Call Button: Pure High-Contrast White / Slate Card */
+.callButton {
+  background-color: #ffffff;
+  color: #0a1c3c;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.callButton:active {
+  transform: scale(0.98);
+  background-color: #f1f5f9;
+}
+
+/* Quote Button: Renova Terracotta Orange Accent */
+.quoteButton {
+  background: linear-gradient(135deg, #e55a2b 0%, #d04a1e 100%);
+  color: #ffffff;
+  border: 1px solid rgba(229, 90, 43, 0.5);
+  box-shadow: 0 2px 10px rgba(229, 90, 43, 0.35);
+}
+
+.quoteButton:active {
+  transform: scale(0.98);
+  background-color: #c23e15;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.callText,
+.quoteText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.microTag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
+
+.callText strong,
+.quoteText strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}

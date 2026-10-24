@@ -3,6 +3,12 @@
   padding: var(--space-4) 0;
 }
 
+@media (max-width: 767px) {
+  .bar {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 .inner {
   max-width: var(--container-max);
   margin: 0 auto;

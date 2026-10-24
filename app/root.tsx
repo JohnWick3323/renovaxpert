@@ -15,6 +15,7 @@ import { ServicesSummaryFooter } from "./blocks/__global/services-summary-footer
 import { ContactLegalFooter } from "./blocks/__global/contact-legal-footer";
 import { SocialMediaCopyright } from "./blocks/__global/social-media-copyright";
 import { CookieConsent } from "./components/cookie-consent";
+import { MobileStickyActionBar } from "./components/mobile-sticky-action-bar";
 import { siteConfig } from "./lib/site-config";
 
 export const meta: Route.MetaFunction = () => [
@@ -95,6 +96,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <SocialMediaCopyright />
         </footer>
 
+        <MobileStickyActionBar />
         <CookieConsent />
         <ScrollRestoration />
         <Scripts />
